@@ -98,10 +98,10 @@
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: #FDFDFD;
-        padding: 0px 22px 22px;
+        padding: 0px 22px 15px;
         border-radius: 16px;
         box-shadow: 0 4px 15px #1A1A1A12;
-        min-width: 325px;
+        min-width: 365px;
         width: 100%;
         max-width: 275px;
     }
@@ -115,12 +115,12 @@
       }
   
       .login-box .form_title {
-      padding: 15px 0;
+      padding: 14px 0;
       color: var(--text-color-primary);
       font-weight: 700;
   }
   .login-box input[type="email"], .login-box input[type="password"] {
-    width: 95%;
+    width: 100%;
     padding: 6px 0px 6px 10px;
     
     border-radius: 10px;
@@ -207,4 +207,16 @@
         margin: 0 auto;
         text-align: center;
         display: block;
+      }
+
+      .error{
+        color: #8e0b21;
+      }
+
+      input:valid + .error{
+        display: none;
+      }
+
+      input:invalid {
+        border-color: #8e0b21;      
       }

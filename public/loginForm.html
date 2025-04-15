@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ida dance studio</title>
- <link rel="stylesheet" href="./style/login_form.css">
- <link rel="stylesheet" href="./style/polaris.css">
+  <link rel="stylesheet" href="./style/polaris.css">
+  <link rel="stylesheet" href="./style/login_form.css">
+  <link rel="stylesheet" href="./style/responsive_login_form.css">
 </head>
 
 <body>
@@ -14,30 +15,82 @@
     <img class="login_banner" src="./media/login_banner.jpg" alt="login">
     <div class="login-box">
       <h4 class="form_title center">Login</h4>
-      <form action="#" method="POST" autocomplete="on"  id="login-form" name="loginForm">
-      <div class="field_email inputfields_parent">
-        <input id="email" type="email" name="email" placeholder="Email Address" inputmode="email"
-          aria-label="Enter your email address" required />
-        <span class="hidden" aria-describedby="email" role="alert"> Email is required</span>
-      </div>
-      <div class="field_password inputfields_parent"> 
-        <input id="password" type="password" name="password" placeholder="Password" aria-label="Enter your password"
-         required  />
-        <span  class="hidden" aria-describedby="password" role="alert">Password is required</span>
-      </div>
-      <div class="remember-forgot">
-          <label class="Polaris-Choice Polaris-Checkbox__ChoiceLabel" for=":Rcq6:"><span class="Polaris-Choice__Control"><span class="Polaris-Checkbox"><input id=":Rcq6:" type="checkbox" class="Polaris-Checkbox__Input" aria-invalid="false" role="checkbox" aria-checked="false" value=""><span class="Polaris-Checkbox__Backdrop"></span><span class="Polaris-Checkbox__Icon Polaris-Checkbox--animated">
-            <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 459.53"><path fill-rule="nonzero" d="M9.38 212.26l91.05-1.2c1.9-.01 3.69.53 5.19 1.49 32.96 19.01 62.2 42.95 87.35 71.5 33.32-54.09 68.94-103.63 106.55-149.04C339.7 86.5 382.32 42.5 426.98 2.46a9.464 9.464 0 016.33-2.41L502.67 0c8.53 0 12.23 9.31 6.73 16.26-61.47 68.29-117.32 139.05-167.78 212a2075.014 2075.014 0 00-135.99 226.12c-2.4 4.65-8.14 6.49-12.79 4.09a9.476 9.476 0 01-4.35-4.63C146.26 363.35 86.92 286.45 4.14 229.6c-7.67-5.25-3.96-17.2 5.24-17.34z"/></svg>
-          </span></span></span><span class="Polaris-Choice__Label"><span class="Polaris-Text--root Polaris-Text--bodyMd">Remember me</span></span></label>
+      <form action="#" method="POST" autocomplete="off" id="login-form" name="loginForm">
+        <div class="field_email inputfields_parent Polaris-TextField--error">
+          <input class="Polaris-TextField__Input" id="email" type="email" name="email" placeholder="Email Address"
+            inputmode="email" aria-label="Enter your email address" required />
+
+          <div class="Polaris-Labelled__Error hidden error">
+            <div id=":Rq6:Error" class="Polaris-InlineError">
+              <div class="Polaris-InlineError__Icon">
+                <span class="Polaris-Icon">
+                  <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                    <path d="M10 6a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.75.75 0 0 1 .75-.75Z">
+                    </path>
+                    <path d="M11 13a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z">
+                    </path>
+                    <path fill-rule="evenodd"
+                      d="M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Zm-1.5 0a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0Z">
+                    </path>
+                  </svg>
+                </span>
+              </div>
+              <span class="Polaris-Text--root Polaris-Text--bodyMd">Email is required</span>
+            </div>
+          </div>
+        </div>
+        <div class="field_password inputfields_parent">
+          <input id="password" type="password" name="password" placeholder="Password" aria-label="Enter your password"
+            required />
+
+
+          <div class="Polaris-Labelled__Error hidden error">
+            <div id=":Rq6:Error" class="Polaris-InlineError">
+              <div class="Polaris-InlineError__Icon">
+                <span class="Polaris-Icon">
+                  <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                    <path d="M10 6a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.75.75 0 0 1 .75-.75Z">
+                    </path>
+                    <path d="M11 13a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z">
+                    </path>
+                    <path fill-rule="evenodd"
+                      d="M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Zm-1.5 0a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0Z">
+                    </path>
+                  </svg>
+                </span>
+              </div>
+              <span class="Polaris-Text--root Polaris-Text--bodyMd">Password is required</span>
+            </div>
+          </div>
+        </div>
+        <div class="remember-forgot">
+          <label class="Polaris-Choice Polaris-Checkbox__ChoiceLabel" for=":Rcq6:"><span
+              class="Polaris-Choice__Control"><span class="Polaris-Checkbox"><input id=":Rcq6:" type="checkbox"
+                  class="Polaris-Checkbox__Input" aria-invalid="false" role="checkbox" aria-checked="false"
+                  value=""><span class="Polaris-Checkbox__Backdrop"></span><span
+                  class="Polaris-Checkbox__Icon Polaris-Checkbox--animated">
+                  <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                    text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                    clip-rule="evenodd" viewBox="0 0 512 459.53">
+                    <path fill-rule="nonzero"
+                      d="M9.38 212.26l91.05-1.2c1.9-.01 3.69.53 5.19 1.49 32.96 19.01 62.2 42.95 87.35 71.5 33.32-54.09 68.94-103.63 106.55-149.04C339.7 86.5 382.32 42.5 426.98 2.46a9.464 9.464 0 016.33-2.41L502.67 0c8.53 0 12.23 9.31 6.73 16.26-61.47 68.29-117.32 139.05-167.78 212a2075.014 2075.014 0 00-135.99 226.12c-2.4 4.65-8.14 6.49-12.79 4.09a9.476 9.476 0 01-4.35-4.63C146.26 363.35 86.92 286.45 4.14 229.6c-7.67-5.25-3.96-17.2 5.24-17.34z" />
+                  </svg>
+                </span></span></span><span class="Polaris-Choice__Label"><span
+                class="Polaris-Text--root Polaris-Text--bodyMd">Remember me</span></span></label>
           <a href="#" aria-label="Recover your account password">Forgot Password?</a>
         </div>
 
-        <div class="hidden" id="error-message" role="alert" aria-live="assertive"></div>
-        
+        <div class="hidden error" id="error-message" role="alert" aria-live="assertive"></div>
+
         <button class="center primary_button" type="submit" form="login-form">Login</button>
       </form>
     </div>
   </div>
+
+
+
+
+
 </body>
 
 </html>
