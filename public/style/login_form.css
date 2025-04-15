@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "Inter";
+    src: url("./style/Inter_28pt-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    src: url("./style/FontsFree-Net-SFProText-Regular-1.ttf");
+  }
+  
+   
+  
+  
+      :root {
+        /* Font variables */
+        --primary-font: "Inter", sans-serif;
+        --secondary-font: "SF Pro Text", sans-serif;
+        --font-size-base: 13px;
+        --font-size-heading: 20px;
+        --font-size-button: 12px;
+        --line-height-base: 20px;
+        --line-height-button: 16px;
+  
+        /* Button variables */
+        --button-bg-primary: #303030;
+        --button-bg-hover: #555;
+        --button-text-color: white;
+        --button-padding: 6px 12px;
+        --button-border-radius: 5px;
+        --button-font-weight: 600;
+  
+        /* Text variables */
+        --text-color-primary: #050505;
+        --text-color-secondary: #555;
+        --text-heading-weight: 650;
+        --text-input-weight: 450;
+      }
+  
+      body * {
+        margin: 0;
+        padding: 0;
+        font-family: var(--primary-font);
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
+      }
+  
+      .login-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+  
+      .login-container img {
+        max-width: 100%;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        filter: grayscale(1);
+      }
+  
+      .login-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #FDFDFD;
+      padding: 5px 23px 23px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px #1A1A1A12;
+  }
+  
+      h4,
+      .h4 {
+        font-family: var(--primary-font);
+        font-weight: var(--text-heading-weight);
+        font-size: var(--font-size-heading);
+        line-height: normal;
+      }
+  
+      .login-box .form_title {
+      padding: 15px 0;
+      color: var(--text-color-primary);
+      font-weight: 650;
+  }
+      .login-box input[type="email"],
+      .login-box input[type="password"] {
+        width: 95%;
+        padding: 10px 0px 10px 10px;
+        margin-bottom: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+        font-family: var(--primary-font);
+        font-weight: var(--text-input-weight);
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
+        letter-spacing: 0px;
+        
+      }
+      .login-box input::placeholder {
+        color:var(--text-color-primary);
+        font-weight: 500;
+      }
+  
+      .remember-forgot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+  
+      .remember-forgot label {
+        display: flex;
+        align-items: center;
+        color:#8A8A8A;
+        opacity: 0.8;
+      }
+  
+      .remember-forgot input[type="checkbox"] {
+        margin-right: 5px;
+      }
+  
+      .remember-forgot a {
+        text-decoration: none;
+        color:#8A8A8A;
+      }
+  
+      .remember-forgot a:hover {
+        text-decoration: underline;
+      }
+  
+      .login-box button {
+        width: fit-content;
+        padding: var(--button-padding);
+        background-color: var(--button-bg-primary);
+        color: var(--button-text-color);
+        border: none;
+        border-radius: var(--button-border-radius);
+        cursor: pointer;
+        font-family: var(--secondary-font);
+        font-weight: var(--button-font-weight);
+        font-size: var(--font-size-button);
+        line-height: var(--line-height-button);
+        letter-spacing: 0.5px;
+      }
+  
+      .login-box button:hover {
+        background-color: var(--button-bg-hover);
+      }
+  
+      .center {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+      }
