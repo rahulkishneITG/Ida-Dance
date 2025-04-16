@@ -1,77 +1,93 @@
-.homescreen_grid {   
-   
+.homescreen_grid {
+
     display: flex;
     width: 100%;
-    /* grid-template-columns: 240px auto; */
+
 }
- 
+
 .grid_item {
     width: 100%;
 }
+
 .logo_conatiner_dashboard {
     background-color: #fff;
     max-width: 100%;
     position: relative;
 }
+
 .left_sidebar_parent.grid_item {
     max-width: 300px;
-    /* width: 100%; */
     min-width: 240px;
 }
 
-.homescreen_grid  img.logo {
+.homescreen_grid img.logo {
     max-width: 100%;
 }
-.transparent_bg{
-  background-color: transparent;
+
+.transparent_bg {
+    background-color: transparent;
 }
+
 .badge_parent {
     max-width: fit-content;
     padding: 24px 8px 8px 0;
 }
+
 .right_sidebar_parent .badge_parent .Polaris-Box {
     padding: 6px 12px;
 }
+
 .badges_conatiner {
     display: flex;
 }
+
 .info_container {
     max-width: 950px;
     margin: 0 auto;
 }
-.badges_conatiner .Polaris-Text--root{
-  color:var(--text-color-primary);
+
+.badges_conatiner .Polaris-Text--root {
+    color: var(--text-color-primary);
 }
+
 .left_sidebar_parent.grid_item {
-    
+
     background: #EBEBEB;
     height: 100vh;
 }
-.left_sidebar_parent.grid_item .Polaris-ResourceList__ResourceListWrapper{
-  border:0;
+
+.left_sidebar_parent.grid_item .Polaris-ResourceList__ResourceListWrapper {
+    border: 0;
 }
+
 .left_sidebar_parent.grid_item .Polaris-ResourceItem__ListItem {
     max-width: 216px;
     margin: 0 auto;
     border: none;
 }
+
 .left_sidebar_parent .Polaris-LegacyCard.transparent_bg {
     padding-top: 20px;
     border-radius: 0;
     border: 0;
     box-shadow: none;
 }
-.left_sidebar_parent .Polaris-ResourceItem__Link, .Polaris-ResourceItem__Button { 
-    z-index: 9; 
+
+.left_sidebar_parent .Polaris-ResourceItem__Link,
+.Polaris-ResourceItem__Button {
+    z-index: 9;
 }
+
 .left_sidebar_parent.grid_item .Polaris-Box {
     padding: 0;
 }
+
 .left_sidebar_parent .Polaris-Box .Polaris-InlineGrid {
     align-items: center;
     gap: 8px;
     padding: 2px 6px;
 }
+
 .right_footer_section {
     position: absolute;
     bottom: 0;
@@ -92,8 +108,6 @@
 
 .right_sidebar_parent .info_container .cart_grid_item {
     padding: 16px;
-     
-    /* row-gap: 20px !important; */
     background-color: var(--p-color-bg-surface);
 }
 
@@ -103,20 +117,21 @@
     gap: 10px;
     padding-top: 20px;
 }
+
 .cartbottom h4.h4.Polaris-Text--bold {
     font-size: 20px;
     line-height: 20px;
-   
+
 }
- 
+
 .cart_grid_item .Polaris-Text--bold {
-    
+
     font-size: 14px;
     letter-spacing: 0.4px;
 }
 
 .left_sidebar_parent .Polaris-LegacyCard::before {
-display: none;
+    display: none;
 }
 
 .cartheading h4.h4.Polaris-Text--bold {
@@ -135,45 +150,47 @@ display: none;
     border-bottom: 2px dotted lightgrey;
 }
 
-.left_sidebar_parent .Polaris-Avatar__Initials , .left_sidebar_parent .Polaris-Avatar::after{
+.left_sidebar_parent .Polaris-Avatar__Initials,
+.left_sidebar_parent .Polaris-Avatar::after {
     background-color: #ebebeb;
 }
-.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover + .Polaris-Box{
-    background-color: #ffff;
-}
-.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover + .Polaris-Box{
+
+.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover+.Polaris-Box {
     background-color: #ffff;
 }
 
-.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover  + .Polaris-Box .Polaris-Avatar::after{
+.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover+.Polaris-Box {
     background-color: #ffff;
 }
 
-.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover   + .Polaris-Box .Polaris-Avatar__Initials {
+.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover+.Polaris-Box .Polaris-Avatar::after {
+    background-color: #ffff;
+}
+
+.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover+.Polaris-Box .Polaris-Avatar__Initials {
     background-color: #ffff;
 }
 
 .sidebar_footer {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    
+    left: 0;
     width: 100%;
-    
+    display: flex;
+    justify-content: center;
 }
 
- 
 .sidebar_footer a.link {
-    
     padding: 10px 0;
     text-transform: capitalize;
     text-decoration: none;
     max-width: 216px;
     width: 100%;
-    transform: translateX(-50%);
+
     display: flex;
     gap: 5px;
 }
+
 .sidebar-toggler {
     position: absolute;
     right: 10px;
@@ -183,60 +200,90 @@ display: none;
     z-index: 2;
 }
 
-/* responsive start */
+.right_footer_section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: #F6F6F7;
+    display: flex;
+    justify-content: center;
+}
+
+.right_sidebar_parent.grid_item {
+    position: relative;
+}
+
+.right_footer_section .policies_link {
+    left: 50%;
+
+    padding: 12px;
+}
+
+/* responsive start homescreen dashboard start */
 
 @media only screen and (min-width: 786px) {
-    .sidebar-menu-button , .sidebar-toggler{
-      display: none;
+
+    .sidebar-menu-button,
+    .sidebar-toggler {
+        display: none;
     }
+
     aside.sidebar_container {
-      position: relative;
-  }
-  
-  }
-  
-  @media only screen and (max-width: 1199px) {
+        position: relative;
+    }
+
+}
+
+@media only screen and (max-width: 1199px) {
     .right_sidebar_parent .Polaris-InlineGrid {
-    padding: 20px;
-      grid-template-columns: 1fr 1fr;
-  }
-  .badges_conatiner {  
-      padding: 0 20px;
-  }
-  
-  }
-  @media only screen and (max-width: 786px) {
-    .sidebar-menu-button, .sidebar-toggler {
-      display: inline-flex;
-  }
-     .sidebar_container.collapsed {
-     position: absolute;  
-      left: -270px;
-      width: 240px;  
-      transition: all 0.4s ease;
-     }
-     .badge_parent {
-      max-width: fit-content;
-      padding: 12px  12px 0 0;
-  }
-  
-  
-       .sidebar_container {
-      position: fixed;    
-      top: 0;    
-      z-index: 10;
-      left: 0;
-      transition: all 0.4s ease;
-      width: 240px;
-      height: 100vh;   
-      transition: all 0.4s ease;
-  }
-  
-         
-  }
-  
-  @media only screen and (max-width: 500px) {
-    .right_sidebar_parent .Polaris-InlineGrid {   
-      grid-template-columns: 1fr ;
-  }
-  }
+        padding: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .badges_conatiner {
+        padding: 0 20px;
+    }
+
+}
+
+@media only screen and (max-width: 786px) {
+
+    .sidebar-menu-button,
+    .sidebar-toggler {
+        display: inline-flex;
+    }
+
+    .sidebar_container.collapsed {
+        position: absolute;
+        left: -270px;
+        width: 240px;
+        transition: all 0.4s ease;
+    }
+
+    .badge_parent {
+        max-width: fit-content;
+        padding: 12px 12px 0 0;
+    }
+
+
+    .sidebar_container {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        left: 0;
+        transition: all 0.4s ease;
+        width: 240px;
+        height: 100vh;
+        transition: all 0.4s ease;
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+    .right_sidebar_parent .Polaris-InlineGrid {
+        grid-template-columns: 1fr;
+    }
+}
