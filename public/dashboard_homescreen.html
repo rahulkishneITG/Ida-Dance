@@ -9,12 +9,56 @@
   <link rel="stylesheet" href="./style/global.css">
   <link rel="stylesheet" href="./style/homescreen.css">
 
+  <style>
+    @media only screen and (max-width: 600px) {
+      .sidebar_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 270px;
+    height: 100vh;
+    background: #151A2D;
+    transition: all 0.4s ease;
+}
+.sidebar.collapsed {
+    width: 270px;
+    left: -270px;
+}
+}
+.sidebar_footer {
+    position: absolute;
+    border: 0;
+}
+aside.sidebar_container {
+    position: relative;
+}
+ 
+.sidebar_footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+  </style>
 </head>
 
 <body>
 
   <div class="homescreen_container">
+    <!-- <button class="sidebar-menu-button">
+      <span class="material-symbols-rounded">menu</span>
+    </button> -->
     <div class="homescreen_grid">
+      <aside class="sidebar_container">
+        <!-- <header class="sidebar-header">
+         
+          <button class="sidebar-toggler">
+            <span class="material-symbols-rounded">chevron_left</span>
+          </button>
+        </header> -->
+
       <div class="left_sidebar_parent grid_item">
         <div class="logo_conatiner_dashboard">
           <img class="logo" src="./media/Store menu button.png" alt="logo_dashboard" width="" height="">
@@ -191,6 +235,11 @@
           </div>
         </div>
       </div>
+        <div class="sidebar_footer">
+          <button>sign in</button>
+        </div>
+     
+    </aside>
       <div class="right_sidebar_parent grid_item">
         <div>
           <div class="Polaris-FullscreenBar transparent_bg">
