@@ -69,8 +69,12 @@
 }
 .left_sidebar_parent .Polaris-Box .Polaris-InlineGrid {
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     padding: 2px 6px;
+}
+
+.left_sidebar_parent .Polaris-ResourceItem .Polaris-Box h3.Polaris-Text--root.Polaris-Text--bodyMd.Polaris-Text--bold {
+    text-transform: capitalize;
 }
 
 .left_sidebar_parent .Polaris-ResourceItem {
