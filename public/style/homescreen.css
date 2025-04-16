@@ -72,6 +72,10 @@
     gap: 8px;
     padding: 2px 6px;
 }
+.right_footer_section {
+    position: absolute;
+    bottom: 0;
+}
 
 .left_sidebar_parent .Polaris-ResourceItem .Polaris-Box h3.Polaris-Text--root.Polaris-Text--bodyMd.Polaris-Text--bold {
     text-transform: capitalize;
