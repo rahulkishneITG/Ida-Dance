@@ -1,0 +1,119 @@
+.homescreen_grid {   
+   
+    display: grid;
+    width: 100%;
+    grid-template-columns: 240px auto;
+}
+ 
+.grid_item {
+    width: 100%;
+}
+.logo_conatiner_dashboard {
+    background-color: #fff;
+    max-width: 100%;
+}
+ 
+
+.homescreen_grid  img.logo {
+    max-width: 100%;
+}
+.transparent_bg{
+  background-color: transparent;
+}
+.badge_parent {
+    max-width: fit-content;
+    padding: 24px 8px 8px 0;
+}
+.right_sidebar_parent .badge_parent .Polaris-Box {
+    padding: 6px 12px;
+}
+.badges_conatiner {
+    display: flex;
+}
+.info_container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+.badges_conatiner .Polaris-Text--root{
+  color:var(--text-color-primary);
+}
+.left_sidebar_parent.grid_item {
+    
+    background: #EBEBEB;
+    height: 100vh;
+}
+.left_sidebar_parent.grid_item .Polaris-ResourceList__ResourceListWrapper{
+  border:0;
+}
+.left_sidebar_parent.grid_item .Polaris-ResourceItem__ListItem {
+    max-width: 216px;
+    margin: 0 auto;
+    border: none;
+}
+.left_sidebar_parent .Polaris-LegacyCard.transparent_bg {
+    padding-top: 20px;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+}
+.left_sidebar_parent .Polaris-ResourceItem__Link, .Polaris-ResourceItem__Button { 
+    z-index: 9; 
+}
+.left_sidebar_parent.grid_item .Polaris-Box {
+    padding: 0;
+}
+.left_sidebar_parent .Polaris-Box .Polaris-InlineGrid {
+    align-items: center;
+    gap: 4px;
+    padding: 2px 12px;
+}
+
+.left_sidebar_parent .Polaris-ResourceItem {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left_sidebar_parent .Polaris-ResourceItem .Polaris-InlineGrid:hover {
+    background-color: var(--p-color-bg-surface);
+}
+
+.right_sidebar_parent .info_container .cart_grid_item {
+    padding: 16px;
+     
+    /* row-gap: 20px !important; */
+    background-color: var(--p-color-bg-surface);
+}
+
+.cartbottom {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+.cartbottom h4.h4.Polaris-Text--bold {
+    font-size: 20px;
+    line-height: 20px;
+   
+}
+.cartheading {
+    position: relative;
+}
+.cart_grid_item .Polaris-Text--bold {
+    
+    font-size: 14px;
+    letter-spacing: 0.4px;
+}
+
+.left_sidebar_parent .Polaris-LegacyCard::before {
+display: none;
+}
+
+.cartheading:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: 2px;
+    width: 40%;
+    border-bottom: 2px dotted lightgrey;
+}
