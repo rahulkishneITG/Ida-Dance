@@ -1,8 +1,8 @@
 .homescreen_grid {   
    
-    display: grid;
+    display: flex;
     width: 100%;
-    grid-template-columns: 240px auto;
+    /* grid-template-columns: 240px auto; */
 }
  
 .grid_item {
@@ -12,7 +12,9 @@
     background-color: #fff;
     max-width: 100%;
 }
- 
+.left_sidebar_parent.grid_item {
+    max-width: 240px;
+}
 
 .homescreen_grid  img.logo {
     max-width: 100%;
@@ -116,4 +118,22 @@ display: none;
     height: 2px;
     width: 40%;
     border-bottom: 2px dotted lightgrey;
+}
+
+.left_sidebar_parent .Polaris-Avatar__Initials , .left_sidebar_parent .Polaris-Avatar::after{
+    background-color: #ebebeb;
+}
+.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover + .Polaris-Box{
+    background-color: #ffff;
+}
+.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover + .Polaris-Box{
+    background-color: #ffff;
+}
+
+.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover   .left_sidebar_parent .Polaris-Avatar::after{
+    background-color: #ffff;
+}
+
+.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover  .left_sidebar_parent .Polaris-Avatar__Initials {
+    background-color: #ffff;
 }
