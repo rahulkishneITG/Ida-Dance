@@ -11,9 +11,12 @@
 .logo_conatiner_dashboard {
     background-color: #fff;
     max-width: 100%;
+    position: relative;
 }
 .left_sidebar_parent.grid_item {
-    max-width: 240px;
+    max-width: 300px;
+    /* width: 100%; */
+    min-width: 240px;
 }
 
 .homescreen_grid  img.logo {
@@ -67,7 +70,7 @@
 .left_sidebar_parent .Polaris-Box .Polaris-InlineGrid {
     align-items: center;
     gap: 4px;
-    padding: 2px 12px;
+    padding: 2px 6px;
 }
 
 .left_sidebar_parent .Polaris-ResourceItem {
@@ -97,9 +100,7 @@
     line-height: 20px;
    
 }
-.cartheading {
-    position: relative;
-}
+ 
 .cart_grid_item .Polaris-Text--bold {
     
     font-size: 14px;
@@ -110,13 +111,19 @@
 display: none;
 }
 
-.cartheading:before {
+.cartheading h4.h4.Polaris-Text--bold {
+    display: inline-block;
+    width: fit-content;
+    position: relative;
+}
+
+.cartheading h4.h4.Polaris-Text--bold:before {
     content: "";
     position: absolute;
     left: 0;
     top: 100%;
     height: 2px;
-    width: 40%;
+    width: 50%;
     border-bottom: 2px dotted lightgrey;
 }
 
@@ -130,10 +137,98 @@ display: none;
     background-color: #ffff;
 }
 
-.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover   .left_sidebar_parent .Polaris-Avatar::after{
+.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover  + .Polaris-Box .Polaris-Avatar::after{
     background-color: #ffff;
 }
 
-.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover  .left_sidebar_parent .Polaris-Avatar__Initials {
+.left_sidebar_parent.grid_item .Polaris-ResourceItem a:hover   + .Polaris-Box .Polaris-Avatar__Initials {
     background-color: #ffff;
 }
+
+.sidebar_footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    
+    width: 100%;
+    
+}
+
+ 
+.sidebar_footer a.link {
+    
+    padding: 10px 0;
+    text-transform: capitalize;
+    text-decoration: none;
+    max-width: 216px;
+    width: 100%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+.sidebar-toggler {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* responsive start */
+
+@media only screen and (min-width: 786px) {
+    .sidebar-menu-button , .sidebar-toggler{
+      display: none;
+    }
+    aside.sidebar_container {
+      position: relative;
+  }
+  
+  }
+  
+  @media only screen and (max-width: 1199px) {
+    .right_sidebar_parent .Polaris-InlineGrid {
+    padding: 20px;
+      grid-template-columns: 1fr 1fr;
+  }
+  .badges_conatiner {  
+      padding: 0 20px;
+  }
+  
+  }
+  @media only screen and (max-width: 786px) {
+    .sidebar-menu-button, .sidebar-toggler {
+      display: inline-flex;
+  }
+     .sidebar_container.collapsed {
+     position: absolute;  
+      left: -270px;
+      width: 240px;  
+      transition: all 0.4s ease;
+     }
+     .badge_parent {
+      max-width: fit-content;
+      padding: 12px  12px 0 0;
+  }
+  
+  
+       .sidebar_container {
+      position: fixed;    
+      top: 0;    
+      z-index: 10;
+      left: 0;
+      transition: all 0.4s ease;
+      width: 240px;
+      height: 100vh;   
+      transition: all 0.4s ease;
+  }
+  
+         
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .right_sidebar_parent .Polaris-InlineGrid {   
+      grid-template-columns: 1fr ;
+  }
+  }

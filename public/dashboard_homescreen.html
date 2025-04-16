@@ -9,244 +9,256 @@
   <link rel="stylesheet" href="./style/global.css">
   <link rel="stylesheet" href="./style/homescreen.css">
 
-  <style>
-    @media only screen and (max-width: 600px) {
-      .sidebar_container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 270px;
-    height: 100vh;
-    background: #151A2D;
-    transition: all 0.4s ease;
-}
-.sidebar.collapsed {
-    width: 270px;
-    left: -270px;
-}
-}
-.sidebar_footer {
-    position: absolute;
-    border: 0;
-}
-aside.sidebar_container {
-    position: relative;
-}
- 
-.sidebar_footer {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-}
-  </style>
 </head>
 
 <body>
 
   <div class="homescreen_container">
-    <!-- <button class="sidebar-menu-button">
-      <span class="material-symbols-rounded">menu</span>
-    </button> -->
+
     <div class="homescreen_grid">
       <aside class="sidebar_container">
-        <!-- <header class="sidebar-header">
-         
-          <button class="sidebar-toggler">
-            <span class="material-symbols-rounded">chevron_left</span>
-          </button>
-        </header> -->
 
-      <div class="left_sidebar_parent grid_item">
-        <div class="logo_conatiner_dashboard">
-          <img class="logo" src="./media/Store menu button.png" alt="logo_dashboard" width="" height="">
-        </div>
-        <div class="Polaris-LegacyCard transparent_bg">
-          <div class="Polaris-ResourceList__ResourceListWrapper">
-            <ul class="Polaris-ResourceList" aria-live="polite">
-              <li class="Polaris-ResourceItem__ListItem">
-                <div class="Polaris-ResourceItem__ItemWrapper">
-                  <div class="Polaris-ResourceItem" data-href="#">
-                    <a aria-describedby="100" aria-label="View details for home" class="Polaris-ResourceItem__Link"
-                      tabindex="0" id=":R5ikq6:" href="#" data-polaris-unstyled="true">
-                    </a>
-                    <div class="Polaris-Box" id="100"
-                      style="--pc-box-padding-block-start-xs:var(--p-space-300);--pc-box-padding-block-end-xs:var(--p-space-300);--pc-box-padding-inline-start-xs:var(--p-space-300);--pc-box-padding-inline-end-xs:var(--p-space-300);position:relative;z-index:var(--pc-resource-item-content-stacking-order)">
-                      <div class="Polaris-InlineGrid" style="--pc-inline-grid-grid-template-columns-xs:1fr auto">
-                        <div class="Polaris-InlineGrid"
-                          style="--pc-inline-grid-grid-template-columns-xs:auto 1fr;--pc-inline-grid-gap-xs:var(--p-space-300)">
-                          <div class="Polaris-InlineStack"
-                            style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
-                            <span aria-label="home" role="img" class="Polaris-Avatar Polaris-Avatar--sizeMd">
-                              <span class="Polaris-Avatar__Initials transparent_bg">
-                                <svg width="" height="" viewBox="0 0 20 21" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M14 16.3175H12C11.7348 16.3175 11.4804 16.2121 11.2929 16.0246C11.1054 15.837 11 15.5827 11 15.3175V12.8175C11 12.6849 10.9473 12.5577 10.8536 12.4639C10.7598 12.3702 10.6326 12.3175 10.5 12.3175H9.5C9.36739 12.3175 9.24021 12.3702 9.14645 12.4639C9.05268 12.5577 9 12.6849 9 12.8175V15.3175C9 15.5827 8.89464 15.837 8.70711 16.0246C8.51957 16.2121 8.26522 16.3175 8 16.3175H6C5.46957 16.3175 4.96086 16.1068 4.58579 15.7317C4.21071 15.3566 4 14.8479 4 14.3175V10.0605C3.99995 9.66638 4.07756 9.27613 4.22838 8.91202C4.3792 8.54792 4.60029 8.21711 4.879 7.93848L8.586 4.23148C8.96106 3.85654 9.46967 3.6459 10 3.6459C10.5303 3.6459 11.0389 3.85654 11.414 4.23148L15.121 7.93848C15.3997 8.21711 15.6208 8.54792 15.7716 8.91202C15.9224 9.27613 16 9.66638 16 10.0605V14.3175C16 14.8479 15.7893 15.3566 15.4142 15.7317C15.0391 16.1068 14.5304 16.3175 14 16.3175Z"
-                                    fill="#4A4A4A" />
-                                </svg>
+        <div class="left_sidebar_parent grid_item">
+          <div class="logo_conatiner_dashboard">
+            <img class="logo" src="./media/Store menu button.png" alt="logo_dashboard" width="" height="">
+            <div class="sidebar-toggler">
 
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                width="24" height="24" viewBox="0 0 256 256" xml:space="preserve">
+                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                  transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                  <path
+                    d="M 45 90 c 24.813 0 45 -20.187 45 -45 C 90 20.187 69.813 0 45 0 C 20.187 0 0 20.187 0 45 C 0 69.813 20.187 90 45 90 z M 45 7 c 20.953 0 38 17.047 38 38 S 65.953 83 45 83 S 7 65.953 7 45 S 24.047 7 45 7 z"
+                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                    transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                  <path
+                    d="M 53.478 65.456 c 0.896 0 1.792 -0.342 2.475 -1.025 c 1.367 -1.366 1.367 -3.583 0 -4.949 L 41.472 45 l 14.481 -14.481 c 1.367 -1.366 1.367 -3.583 0 -4.95 c -1.367 -1.366 -3.583 -1.365 -4.95 0 L 34.048 42.525 c -1.367 1.366 -1.367 3.583 0 4.949 l 16.955 16.956 C 51.687 65.114 52.583 65.456 53.478 65.456 z"
+                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                    transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                </g>
+              </svg>
+
+
+            </div>
+          </div>
+          <div class="Polaris-LegacyCard transparent_bg">
+            <div class="Polaris-ResourceList__ResourceListWrapper">
+              <ul class="Polaris-ResourceList" aria-live="polite">
+                <li class="Polaris-ResourceItem__ListItem">
+                  <div class="Polaris-ResourceItem__ItemWrapper">
+                    <div class="Polaris-ResourceItem" data-href="#">
+                      <a aria-describedby="100" aria-label="View details for home" class="Polaris-ResourceItem__Link"
+                        tabindex="0" id=":R5ikq6:" href="#" data-polaris-unstyled="true">
+                      </a>
+                      <div class="Polaris-Box" id="100"
+                        style="--pc-box-padding-block-start-xs:var(--p-space-300);--pc-box-padding-block-end-xs:var(--p-space-300);--pc-box-padding-inline-start-xs:var(--p-space-300);--pc-box-padding-inline-end-xs:var(--p-space-300);position:relative;z-index:var(--pc-resource-item-content-stacking-order)">
+                        <div class="Polaris-InlineGrid" style="--pc-inline-grid-grid-template-columns-xs:1fr auto">
+                          <div class="Polaris-InlineGrid"
+                            style="--pc-inline-grid-grid-template-columns-xs:auto 1fr;--pc-inline-grid-gap-xs:var(--p-space-300)">
+                            <div class="Polaris-InlineStack"
+                              style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
+                              <span aria-label="home" role="img" class="Polaris-Avatar Polaris-Avatar--sizeMd">
+                                <span class="Polaris-Avatar__Initials transparent_bg">
+                                  <svg viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M14 16.3175H12C11.7348 16.3175 11.4804 16.2121 11.2929 16.0246C11.1054 15.837 11 15.5827 11 15.3175V12.8175C11 12.6849 10.9473 12.5577 10.8536 12.4639C10.7598 12.3702 10.6326 12.3175 10.5 12.3175H9.5C9.36739 12.3175 9.24021 12.3702 9.14645 12.4639C9.05268 12.5577 9 12.6849 9 12.8175V15.3175C9 15.5827 8.89464 15.837 8.70711 16.0246C8.51957 16.2121 8.26522 16.3175 8 16.3175H6C5.46957 16.3175 4.96086 16.1068 4.58579 15.7317C4.21071 15.3566 4 14.8479 4 14.3175V10.0605C3.99995 9.66638 4.07756 9.27613 4.22838 8.91202C4.3792 8.54792 4.60029 8.21711 4.879 7.93848L8.586 4.23148C8.96106 3.85654 9.46967 3.6459 10 3.6459C10.5303 3.6459 11.0389 3.85654 11.414 4.23148L15.121 7.93848C15.3997 8.21711 15.6208 8.54792 15.7716 8.91202C15.9224 9.27613 16 9.66638 16 10.0605V14.3175C16 14.8479 15.7893 15.3566 15.4142 15.7317C15.0391 16.1068 14.5304 16.3175 14 16.3175Z"
+                                      fill="#4A4A4A" />
+                                  </svg>
+
+                                </span>
                               </span>
-                            </span>
-                          </div>
-                          <div class="Polaris-InlineStack"
-                            style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-flex-direction-xs:row">
-                            <div class="Polaris-Box"
-                              style="--pc-box-padding-block-start-xs:var(--p-space-0);--pc-box-padding-block-end-xs:var(--p-space-0);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0);--pc-box-width:100%">
-                              <h3 class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">home</h3>
+                            </div>
+                            <div class="Polaris-InlineStack"
+                              style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-flex-direction-xs:row">
+                              <div class="Polaris-Box"
+                                style="--pc-box-padding-block-start-xs:var(--p-space-0);--pc-box-padding-block-end-xs:var(--p-space-0);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0);--pc-box-width:100%">
+                                <h3 class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">home</h3>
 
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="Polaris-ResourceItem__ListItem">
-                <div class="Polaris-ResourceItem__ItemWrapper">
-                  <div class="Polaris-ResourceItem" data-href="#">
-                    <a aria-describedby="200" aria-label="View details for Students" class="Polaris-ResourceItem__Link"
-                      tabindex="0" id=":R6ikq6:" href="#" data-polaris-unstyled="true">
-                    </a>
-                    <div class="Polaris-Box" id="200"
-                      style="--pc-box-padding-block-start-xs:var(--p-space-300);--pc-box-padding-block-end-xs:var(--p-space-300);--pc-box-padding-inline-start-xs:var(--p-space-300);--pc-box-padding-inline-end-xs:var(--p-space-300);position:relative;z-index:var(--pc-resource-item-content-stacking-order)">
-                      <div class="Polaris-InlineGrid" style="--pc-inline-grid-grid-template-columns-xs:1fr auto">
-                        <div class="Polaris-InlineGrid"
-                          style="--pc-inline-grid-grid-template-columns-xs:auto 1fr;--pc-inline-grid-gap-xs:var(--p-space-300)">
-                          <div class="Polaris-InlineStack"
-                            style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
-                            <span aria-label="Students" role="img" class="Polaris-Avatar Polaris-Avatar--sizeMd">
-                              <span class="Polaris-Avatar__Initials">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M6.50006 6.81747C6.50006 4.88448 8.06706 3.31747 10.0001 3.31747C11.9331 3.31747 13.5001 4.88448 13.5001 6.81747C13.5001 8.75047 11.9331 10.3175 10.0001 10.3175C8.06706 10.3175 6.50006 8.75047 6.50006 6.81747Z"
-                                    fill="#4A4A4A" />
-                                  <path
-                                    d="M4.51609 14.5443C5.62253 12.5527 7.72175 11.3175 10.0001 11.3175C12.2784 11.3175 14.3776 12.5527 15.484 14.5443L15.9207 15.3302C16.416 16.2218 15.7713 17.3175 14.7514 17.3175H5.24873C4.22881 17.3175 3.58412 16.2218 4.07943 15.3302L4.51609 14.5443Z"
-                                    fill="#4A4A4A" />
-                                </svg>
+                </li>
+                <li class="Polaris-ResourceItem__ListItem">
+                  <div class="Polaris-ResourceItem__ItemWrapper">
+                    <div class="Polaris-ResourceItem" data-href="#">
+                      <a aria-describedby="200" aria-label="View details for Students"
+                        class="Polaris-ResourceItem__Link" tabindex="0" id=":R6ikq6:" href="#"
+                        data-polaris-unstyled="true">
+                      </a>
+                      <div class="Polaris-Box" id="200"
+                        style="--pc-box-padding-block-start-xs:var(--p-space-300);--pc-box-padding-block-end-xs:var(--p-space-300);--pc-box-padding-inline-start-xs:var(--p-space-300);--pc-box-padding-inline-end-xs:var(--p-space-300);position:relative;z-index:var(--pc-resource-item-content-stacking-order)">
+                        <div class="Polaris-InlineGrid" style="--pc-inline-grid-grid-template-columns-xs:1fr auto">
+                          <div class="Polaris-InlineGrid"
+                            style="--pc-inline-grid-grid-template-columns-xs:auto 1fr;--pc-inline-grid-gap-xs:var(--p-space-300)">
+                            <div class="Polaris-InlineStack"
+                              style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
+                              <span aria-label="Students" role="img" class="Polaris-Avatar Polaris-Avatar--sizeMd">
+                                <span class="Polaris-Avatar__Initials">
+                                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M6.50006 6.81747C6.50006 4.88448 8.06706 3.31747 10.0001 3.31747C11.9331 3.31747 13.5001 4.88448 13.5001 6.81747C13.5001 8.75047 11.9331 10.3175 10.0001 10.3175C8.06706 10.3175 6.50006 8.75047 6.50006 6.81747Z"
+                                      fill="#4A4A4A" />
+                                    <path
+                                      d="M4.51609 14.5443C5.62253 12.5527 7.72175 11.3175 10.0001 11.3175C12.2784 11.3175 14.3776 12.5527 15.484 14.5443L15.9207 15.3302C16.416 16.2218 15.7713 17.3175 14.7514 17.3175H5.24873C4.22881 17.3175 3.58412 16.2218 4.07943 15.3302L4.51609 14.5443Z"
+                                      fill="#4A4A4A" />
+                                  </svg>
 
+                                </span>
                               </span>
-                            </span>
-                          </div>
-                          <div class="Polaris-InlineStack"
-                            style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-flex-direction-xs:row">
-                            <div class="Polaris-Box"
-                              style="--pc-box-padding-block-start-xs:var(--p-space-0);--pc-box-padding-block-end-xs:var(--p-space-0);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0);--pc-box-width:100%">
-                              <h3 class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">Students</h3>
+                            </div>
+                            <div class="Polaris-InlineStack"
+                              style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-flex-direction-xs:row">
+                              <div class="Polaris-Box"
+                                style="--pc-box-padding-block-start-xs:var(--p-space-0);--pc-box-padding-block-end-xs:var(--p-space-0);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0);--pc-box-width:100%">
+                                <h3 class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">Students</h3>
 
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="Polaris-ResourceItem__ListItem">
-                <div class="Polaris-ResourceItem__ItemWrapper">
-                  <div class="Polaris-ResourceItem" data-href="#">
-                    <a aria-describedby="300" aria-label="View details for Students" class="Polaris-ResourceItem__Link"
-                      tabindex="0" id=":R6ikq6:" href="#" data-polaris-unstyled="true">
-                    </a>
-                    <div class="Polaris-Box" id="300"
-                      style="--pc-box-padding-block-start-xs:var(--p-space-300);--pc-box-padding-block-end-xs:var(--p-space-300);--pc-box-padding-inline-start-xs:var(--p-space-300);--pc-box-padding-inline-end-xs:var(--p-space-300);position:relative;z-index:var(--pc-resource-item-content-stacking-order)">
-                      <div class="Polaris-InlineGrid" style="--pc-inline-grid-grid-template-columns-xs:1fr auto">
-                        <div class="Polaris-InlineGrid"
-                          style="--pc-inline-grid-grid-template-columns-xs:auto 1fr;--pc-inline-grid-gap-xs:var(--p-space-300)">
-                          <div class="Polaris-InlineStack"
-                            style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
-                            <span aria-label="Students" role="img" class="Polaris-Avatar Polaris-Avatar--sizeMd">
-                              <span class="Polaris-Avatar__Initials">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M6.50006 6.81747C6.50006 4.88448 8.06706 3.31747 10.0001 3.31747C11.9331 3.31747 13.5001 4.88448 13.5001 6.81747C13.5001 8.75047 11.9331 10.3175 10.0001 10.3175C8.06706 10.3175 6.50006 8.75047 6.50006 6.81747Z"
-                                    fill="#4A4A4A" />
-                                  <path
-                                    d="M4.51609 14.5443C5.62253 12.5527 7.72175 11.3175 10.0001 11.3175C12.2784 11.3175 14.3776 12.5527 15.484 14.5443L15.9207 15.3302C16.416 16.2218 15.7713 17.3175 14.7514 17.3175H5.24873C4.22881 17.3175 3.58412 16.2218 4.07943 15.3302L4.51609 14.5443Z"
-                                    fill="#4A4A4A" />
-                                </svg>
+                </li>
+                <li class="Polaris-ResourceItem__ListItem">
+                  <div class="Polaris-ResourceItem__ItemWrapper">
+                    <div class="Polaris-ResourceItem" data-href="#">
+                      <a aria-describedby="300" aria-label="View details for Students"
+                        class="Polaris-ResourceItem__Link" tabindex="0" id=":R6ikq6:" href="#"
+                        data-polaris-unstyled="true">
+                      </a>
+                      <div class="Polaris-Box" id="300"
+                        style="--pc-box-padding-block-start-xs:var(--p-space-300);--pc-box-padding-block-end-xs:var(--p-space-300);--pc-box-padding-inline-start-xs:var(--p-space-300);--pc-box-padding-inline-end-xs:var(--p-space-300);position:relative;z-index:var(--pc-resource-item-content-stacking-order)">
+                        <div class="Polaris-InlineGrid" style="--pc-inline-grid-grid-template-columns-xs:1fr auto">
+                          <div class="Polaris-InlineGrid"
+                            style="--pc-inline-grid-grid-template-columns-xs:auto 1fr;--pc-inline-grid-gap-xs:var(--p-space-300)">
+                            <div class="Polaris-InlineStack"
+                              style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
+                              <span aria-label="Students" role="img" class="Polaris-Avatar Polaris-Avatar--sizeMd">
+                                <span class="Polaris-Avatar__Initials">
+                                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M6.50006 6.81747C6.50006 4.88448 8.06706 3.31747 10.0001 3.31747C11.9331 3.31747 13.5001 4.88448 13.5001 6.81747C13.5001 8.75047 11.9331 10.3175 10.0001 10.3175C8.06706 10.3175 6.50006 8.75047 6.50006 6.81747Z"
+                                      fill="#4A4A4A" />
+                                    <path
+                                      d="M4.51609 14.5443C5.62253 12.5527 7.72175 11.3175 10.0001 11.3175C12.2784 11.3175 14.3776 12.5527 15.484 14.5443L15.9207 15.3302C16.416 16.2218 15.7713 17.3175 14.7514 17.3175H5.24873C4.22881 17.3175 3.58412 16.2218 4.07943 15.3302L4.51609 14.5443Z"
+                                      fill="#4A4A4A" />
+                                  </svg>
 
+                                </span>
                               </span>
-                            </span>
-                          </div>
-                          <div class="Polaris-InlineStack"
-                            style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-flex-direction-xs:row">
-                            <div class="Polaris-Box"
-                              style="--pc-box-padding-block-start-xs:var(--p-space-0);--pc-box-padding-block-end-xs:var(--p-space-0);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0);--pc-box-width:100%">
-                              <h3 class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">Students</h3>
+                            </div>
+                            <div class="Polaris-InlineStack"
+                              style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-flex-direction-xs:row">
+                              <div class="Polaris-Box"
+                                style="--pc-box-padding-block-start-xs:var(--p-space-0);--pc-box-padding-block-end-xs:var(--p-space-0);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0);--pc-box-width:100%">
+                                <h3 class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">Students</h3>
 
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="Polaris-ResourceItem__ListItem">
-                <div class="Polaris-ResourceItem__ItemWrapper">
-                  <div class="Polaris-ResourceItem" data-href="#">
-                    <a aria-describedby="400" aria-label="View details for Students" class="Polaris-ResourceItem__Link"
-                      tabindex="0" id=":R6ikq6:" href="#" data-polaris-unstyled="true">
-                    </a>
-                    <div class="Polaris-Box" id="400"
-                      style="--pc-box-padding-block-start-xs:var(--p-space-300);--pc-box-padding-block-end-xs:var(--p-space-300);--pc-box-padding-inline-start-xs:var(--p-space-300);--pc-box-padding-inline-end-xs:var(--p-space-300);position:relative;z-index:var(--pc-resource-item-content-stacking-order)">
-                      <div class="Polaris-InlineGrid" style="--pc-inline-grid-grid-template-columns-xs:1fr auto">
-                        <div class="Polaris-InlineGrid"
-                          style="--pc-inline-grid-grid-template-columns-xs:auto 1fr;--pc-inline-grid-gap-xs:var(--p-space-300)">
-                          <div class="Polaris-InlineStack"
-                            style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
-                            <span aria-label="Students" role="img" class="Polaris-Avatar Polaris-Avatar--sizeMd">
-                              <span class="Polaris-Avatar__Initials">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M6.50006 6.81747C6.50006 4.88448 8.06706 3.31747 10.0001 3.31747C11.9331 3.31747 13.5001 4.88448 13.5001 6.81747C13.5001 8.75047 11.9331 10.3175 10.0001 10.3175C8.06706 10.3175 6.50006 8.75047 6.50006 6.81747Z"
-                                    fill="#4A4A4A" />
-                                  <path
-                                    d="M4.51609 14.5443C5.62253 12.5527 7.72175 11.3175 10.0001 11.3175C12.2784 11.3175 14.3776 12.5527 15.484 14.5443L15.9207 15.3302C16.416 16.2218 15.7713 17.3175 14.7514 17.3175H5.24873C4.22881 17.3175 3.58412 16.2218 4.07943 15.3302L4.51609 14.5443Z"
-                                    fill="#4A4A4A" />
-                                </svg>
+                </li>
+                <li class="Polaris-ResourceItem__ListItem">
+                  <div class="Polaris-ResourceItem__ItemWrapper">
+                    <div class="Polaris-ResourceItem" data-href="#">
+                      <a aria-describedby="400" aria-label="View details for Students"
+                        class="Polaris-ResourceItem__Link" tabindex="0" id=":R6ikq6:" href="#"
+                        data-polaris-unstyled="true">
+                      </a>
+                      <div class="Polaris-Box" id="400"
+                        style="--pc-box-padding-block-start-xs:var(--p-space-300);--pc-box-padding-block-end-xs:var(--p-space-300);--pc-box-padding-inline-start-xs:var(--p-space-300);--pc-box-padding-inline-end-xs:var(--p-space-300);position:relative;z-index:var(--pc-resource-item-content-stacking-order)">
+                        <div class="Polaris-InlineGrid" style="--pc-inline-grid-grid-template-columns-xs:1fr auto">
+                          <div class="Polaris-InlineGrid"
+                            style="--pc-inline-grid-grid-template-columns-xs:auto 1fr;--pc-inline-grid-gap-xs:var(--p-space-300)">
+                            <div class="Polaris-InlineStack"
+                              style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
+                              <span aria-label="Students" role="img" class="Polaris-Avatar Polaris-Avatar--sizeMd">
+                                <span class="Polaris-Avatar__Initials">
+                                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M6.50006 6.81747C6.50006 4.88448 8.06706 3.31747 10.0001 3.31747C11.9331 3.31747 13.5001 4.88448 13.5001 6.81747C13.5001 8.75047 11.9331 10.3175 10.0001 10.3175C8.06706 10.3175 6.50006 8.75047 6.50006 6.81747Z"
+                                      fill="#4A4A4A" />
+                                    <path
+                                      d="M4.51609 14.5443C5.62253 12.5527 7.72175 11.3175 10.0001 11.3175C12.2784 11.3175 14.3776 12.5527 15.484 14.5443L15.9207 15.3302C16.416 16.2218 15.7713 17.3175 14.7514 17.3175H5.24873C4.22881 17.3175 3.58412 16.2218 4.07943 15.3302L4.51609 14.5443Z"
+                                      fill="#4A4A4A" />
+                                  </svg>
 
+                                </span>
                               </span>
-                            </span>
-                          </div>
-                          <div class="Polaris-InlineStack"
-                            style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-flex-direction-xs:row">
-                            <div class="Polaris-Box"
-                              style="--pc-box-padding-block-start-xs:var(--p-space-0);--pc-box-padding-block-end-xs:var(--p-space-0);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0);--pc-box-width:100%">
-                              <h3 class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">Students</h3>
+                            </div>
+                            <div class="Polaris-InlineStack"
+                              style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-flex-direction-xs:row">
+                              <div class="Polaris-Box"
+                                style="--pc-box-padding-block-start-xs:var(--p-space-0);--pc-box-padding-block-end-xs:var(--p-space-0);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0);--pc-box-width:100%">
+                                <h3 class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">Students</h3>
 
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
         <div class="sidebar_footer">
-          <button>sign in</button>
+          <a href="#" class="link"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M8.0006 4.17606C8.0006 3.41611 8.61666 2.80005 9.37661 2.80005H10.6232C11.3831 2.80005 11.9992 3.41611 11.9992 4.17606V4.86369C11.9992 5.05456 12.1254 5.25964 12.3575 5.38091C12.5028 5.45681 12.6439 5.5395 12.7805 5.62855C13.0021 5.77298 13.2456 5.78112 13.4127 5.68467L14.0124 5.33841C14.6706 4.95844 15.5121 5.18393 15.8921 5.84207L16.5154 6.92162C16.8953 7.57976 16.6699 8.42131 16.0117 8.80129L15.3644 9.17503C15.2008 9.26946 15.0869 9.47766 15.0952 9.73541C15.0969 9.79073 15.0978 9.84626 15.0978 9.90197C15.0978 9.99318 15.0954 10.0839 15.0907 10.174C15.0768 10.4377 15.1916 10.6525 15.3585 10.7489L16.0117 11.126C16.6698 11.506 16.8953 12.3475 16.5154 13.0057L15.8921 14.0852C15.5121 14.7433 14.6706 14.9688 14.0124 14.5889L13.312 14.1845C13.1484 14.09 12.9108 14.0956 12.6913 14.2322C12.5827 14.2999 12.4714 14.3635 12.3575 14.423C12.1254 14.5443 11.9992 14.7494 11.9992 14.9403V15.7512C11.9992 16.5112 11.3831 17.1272 10.6232 17.1272H9.37662C8.61666 17.1272 8.0006 16.5112 8.0006 15.7512V14.9402C8.0006 14.7493 7.87444 14.5443 7.64232 14.423C7.52844 14.3635 7.4171 14.2998 7.3085 14.2322C7.08906 14.0955 6.85147 14.09 6.68779 14.1845L5.98734 14.5889C5.3292 14.9688 4.48765 14.7433 4.10767 14.0852L3.48439 13.0057C3.10442 12.3475 3.32991 11.506 3.98805 11.126L4.64139 10.7488C4.80834 10.6524 4.92311 10.4377 4.90922 10.1739C4.90448 10.0838 4.90208 9.99316 4.90208 9.90197C4.90208 9.84628 4.90298 9.79078 4.90476 9.73549C4.91304 9.47774 4.79909 9.26955 4.63553 9.17511L3.98804 8.80129C3.3299 8.42131 3.10441 7.57976 3.48439 6.92162L4.10766 5.84207C4.48764 5.18393 5.32919 4.95844 5.98733 5.33841L6.58714 5.68472C6.75419 5.78116 6.99776 5.77302 7.21931 5.62859C7.3559 5.53955 7.49704 5.45687 7.64232 5.38096C7.87444 5.25969 8.0006 5.05462 8.0006 4.86375V4.17606ZM10 11.5C10.8284 11.5 11.5 10.8284 11.5 10C11.5 9.17157 10.8284 8.5 10 8.5C9.17157 8.5 8.5 9.17157 8.5 10C8.5 10.8284 9.17157 11.5 10 11.5Z"
+                fill="#4A4A4A" />
+            </svg>
+            settings</a>
         </div>
-     
-    </aside>
+
+      </aside>
       <div class="right_sidebar_parent grid_item">
+
         <div>
+
           <div class="Polaris-FullscreenBar transparent_bg">
 
             <div
               style="display:flex;flex-grow:1;justify-content:space-between;align-items:center;padding-left:1rem;padding-right:1rem">
+              <div class="sidebar-menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                  width="20" height="20" viewBox="0 0 256 256" xml:space="preserve">
+                  <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                    transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                    <path
+                      d="M 76.704 90 H 13.296 C 5.964 90 0 84.035 0 76.704 V 13.296 C 0 5.964 5.964 0 13.296 0 h 63.408 C 84.035 0 90 5.964 90 13.296 v 63.408 C 90 84.035 84.035 90 76.704 90 z M 13.296 6 C 9.273 6 6 9.273 6 13.296 v 63.408 C 6 80.728 9.273 84 13.296 84 h 63.408 C 80.728 84 84 80.728 84 76.704 V 13.296 C 84 9.273 80.728 6 76.704 6 H 13.296 z"
+                      style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                      transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    <path
+                      d="M 70.086 27.955 H 19.914 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 h 50.172 c 1.657 0 3 1.343 3 3 S 71.743 27.955 70.086 27.955 z"
+                      style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                      transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    <path
+                      d="M 70.086 48 H 19.914 c -1.657 0 -3 -1.343 -3 -3 c 0 -1.657 1.343 -3 3 -3 h 50.172 c 1.657 0 3 1.343 3 3 C 73.086 46.657 71.743 48 70.086 48 z"
+                      style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                      transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    <path
+                      d="M 70.086 68.046 H 19.914 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 h 50.172 c 1.657 0 3 1.343 3 3 S 71.743 68.046 70.086 68.046 z"
+                      style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                      transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                  </g>
+                </svg>
 
+              </div>
               <div style="margin-left:1rem;flex-grow:1">
                 <p class="Polaris-Text--root Polaris-Text--headingLg">Dashboard</p>
               </div>
@@ -374,6 +386,16 @@ aside.sidebar_container {
     </div>
 
   </div>
+
+  <script>
+    document.querySelectorAll(".sidebar-toggler, .sidebar-menu-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelector(".sidebar_container").classList.toggle("collapsed");
+      });
+    });
+
+    if (window.innerWidth <= 786) document.querySelector(".sidebar_container").classList.add("collapsed");
+  </script>
 
 </body>
 
