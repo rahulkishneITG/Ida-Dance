@@ -1,8 +1,6 @@
 .homescreen_grid {
-
-    display: flex;
+   display: flex;
     width: 100%;
-
 }
 
 .grid_item {
@@ -58,6 +56,7 @@
 
 .left_sidebar_parent.grid_item .Polaris-ResourceList__ResourceListWrapper {
     border: 0;
+    overflow-y: auto;
 }
 
 .left_sidebar_parent.grid_item .Polaris-ResourceItem__ListItem {
@@ -217,7 +216,6 @@
 
 .right_footer_section .policies_link {
     left: 50%;
-
     padding: 12px;
 }
 
@@ -246,10 +244,25 @@
         padding: 0 20px;
     }
 
+    .info_container {
+        
+        padding: 20px 0;
+    }
 }
 
 @media only screen and (max-width: 786px) {
-
+    .right_sidebar_parent.grid_item {
+        position: static;
+        padding: 20px 0;
+    }
+    .right_footer_section {
+        position: fixed;
+        
+    }
+    .right_footer_section .policies_link {
+        
+        text-align: center;
+    }
     .sidebar-menu-button,
     .sidebar-toggler {
         display: inline-flex;
@@ -285,5 +298,7 @@
 @media only screen and (max-width: 500px) {
     .right_sidebar_parent .Polaris-InlineGrid {
         grid-template-columns: 1fr;
+        margin-bottom: 20px;
     }
+    
 }
