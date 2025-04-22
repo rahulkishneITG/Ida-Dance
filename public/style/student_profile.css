@@ -1,0 +1,12 @@
+.info_container .full_width_wrapper{
+    width: 100%;
+}
+.info_container.student_profile {   
+    padding: 20px 0;
+}
+
+.info_container.student_profile .Polaris-IndexTable__TableCell:not(.Polaris-IndexTable__TableCell--flush) {
+    
+    padding: var(--p-space-200) var(--p-space-400);
+    color: #303030;
+}
