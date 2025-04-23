@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ida dance studio</title>
+    <link rel="stylesheet" href="./style/polaris.css">
+    <link rel="stylesheet" href="./style/global.css">
+    <link rel="stylesheet" href="./style/homescreen.css">
+    <style>
+       
+        .edit-student-container .Polaris-LegacyCard__Section {
+            padding: 16px;
+            background: #FFFFFF;
+            border-radius: 10px;
+        }
+
+        .edit-student-container .Polaris-InlineStack {
+            gap: 16px;
+        }
+
+        .edit-student-container .Polaris-Box {
+            margin-bottom: 17px;
+        }
+
+        .Polaris-ButtonGroup {
+            display: flex;
+            justify-content: end;
+            flex-direction: row-reverse;
+            align-items: center;
+            margin-top: 24px;
+        }
+
+        .Polaris-Connected,
+        .Polaris-Select {
+            z-index: 0;
+        }
+
+        .accepts-marketing-content.first-box.Polaris-Box {
+            margin-top: 24px;
+            margin-bottom: 10px;
+        }
+
+        .accepts-marketing-content.Polaris-Box {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .accepts-marketing-content .editicon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .accepts-marketing-content .Polaris-Text--root {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .Polaris-Box.date-and-price-edit {
+            padding-inline: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 8px;
+        }
+
+        .margin-top-item {
+            margin-top: 20px;
+        }
+
+        .edit-student-container {
+            max-width: 61.9vw;
+            margin: 0px auto;
+            margin-top: 60px;
+
+
+        }
+
+        .tabs_item_container {
+            max-height: 600px;
+            overflow-y: auto;
+
+            z-index: 1;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            padding-bottom: 25px;
+        }
+
+        .tabs_item_container::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        @media screen and (max-width:750px) {
+           
+            .Polaris-Tabs__Outer {
+                max-width: 100%;
+                /* overflow: auto; */
+                height: unset;
+                padding: 0;
+                padding-bottom: 40px;
+            }
+
+            .edit-student-container {
+                max-width: 90vw;
+            }
+
+            .edit-student-container input {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="homescreen_container">
+
+        <aside class="sidebar_container">
+
+            <div class="left_sidebar_parent grid_item">
+                <div class="logo_conatiner_dashboard">
+                    <img class="logo" src="./media/Store menu button.png" alt="logo_dashboard" width="" height="">
+                    <div class="sidebar-toggler">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            width="24" height="24" viewBox="0 0 256 256" xml:space="preserve">
+                            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                                transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                                <path
+                                    d="M 45 90 c 24.813 0 45 -20.187 45 -45 C 90 20.187 69.813 0 45 0 C 20.187 0 0 20.187 0 45 C 0 69.813 20.187 90 45 90 z M 45 7 c 20.953 0 38 17.047 38 38 S 65.953 83 45 83 S 7 65.953 7 45 S 24.047 7 45 7 z"
+                                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                    transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                <path
+                                    d="M 53.478 65.456 c 0.896 0 1.792 -0.342 2.475 -1.025 c 1.367 -1.366 1.367 -3.583 0 -4.949 L 41.472 45 l 14.481 -14.481 c 1.367 -1.366 1.367 -3.583 0 -4.95 c -1.367 -1.366 -3.583 -1.365 -4.95 0 L 34.048 42.525 c -1.367 1.366 -1.367 3.583 0 4.949 l 16.955 16.956 C 51.687 65.114 52.583 65.456 53.478 65.456 z"
+                                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                    transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                            </g>
+                        </svg>
+
+
+                    </div>
+                </div>
+                <div class="Polaris-LegacyCard transparent_bg">
+                    <div class="Polaris-ResourceList__ResourceListWrapper">
+                        <ul class="Polaris-ResourceList" aria-live="polite">
+                            <li class="Polaris-ResourceItem__ListItem">
+                                <div class="Polaris-ResourceItem__ItemWrapper">
+                                    <div class="Polaris-ResourceItem" data-href="#">
+                                        <a aria-describedby="100" aria-label="View details for home"
+                                            class="Polaris-ResourceItem__Link" tabindex="0" id=":R5ikq6:" href="#"
+                                            data-polaris-unstyled="true">
+                                        </a>
+                                        <div class="Polaris-Box" id="100"
+                                            style="--pc-box-padding-block-start-xs:var(--p-space-300);--pc-box-padding-block-end-xs:var(--p-space-300);--pc-box-padding-inline-start-xs:var(--p-space-300);--pc-box-padding-inline-end-xs:var(--p-space-300);position:relative;z-index:var(--pc-resource-item-content-stacking-order)">
+                                            <div class="Polaris-InlineGrid"
+                                                style="--pc-inline-grid-grid-template-columns-xs:1fr auto">
+                                                <div class="Polaris-InlineGrid"
+                                                    style="--pc-inline-grid-grid-template-columns-xs:auto 1fr;--pc-inline-grid-gap-xs:var(--p-space-300)">
+                                                    <div class="Polaris-InlineStack"
+                                                        style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
+                                                        <span aria-label="home" role="img"
+                                                            class="Polaris-Avatar Polaris-Avatar--sizeMd">
+                                                            <span class="Polaris-Avatar__Initials transparent_bg">
+                                                                <svg viewBox="0 0 20 21" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M14 16.3175H12C11.7348 16.3175 11.4804 16.2121 11.2929 16.0246C11.1054 15.837 11 15.5827 11 15.3175V12.8175C11 12.6849 10.9473 12.5577 10.8536 12.4639C10.7598 12.3702 10.6326 12.3175 10.5 12.3175H9.5C9.36739 12.3175 9.24021 12.3702 9.14645 12.4639C9.05268 12.5577 9 12.6849 9 12.8175V15.3175C9 15.5827 8.89464 15.837 8.70711 16.0246C8.51957 16.2121 8.26522 16.3175 8 16.3175H6C5.46957 16.3175 4.96086 16.1068 4.58579 15.7317C4.21071 15.3566 4 14.8479 4 14.3175V10.0605C3.99995 9.66638 4.07756 9.27613 4.22838 8.91202C4.3792 8.54792 4.60029 8.21711 4.879 7.93848L8.586 4.23148C8.96106 3.85654 9.46967 3.6459 10 3.6459C10.5303 3.6459 11.0389 3.85654 11.414 4.23148L15.121 7.93848C15.3997 8.21711 15.6208 8.54792 15.7716 8.91202C15.9224 9.27613 16 9.66638 16 10.0605V14.3175C16 14.8479 15.7893 15.3566 15.4142 15.7317C15.0391 16.1068 14.5304 16.3175 14 16.3175Z"
+                                                                        fill="#4A4A4A" />
+                                                                </svg>
+
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="Polaris-InlineStack"
+                                                        style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-flex-direction-xs:row">
+                                                        <div class="Polaris-Box"
+                                                            style="--pc-box-padding-block-start-xs:var(--p-space-0);--pc-box-padding-block-end-xs:var(--p-space-0);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0);--pc-box-width:100%">
+                                                            <h3
+                                                                class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">
+                                                                home</h3>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="Polaris-ResourceItem__ListItem">
+                                <div class="Polaris-ResourceItem__ItemWrapper">
+                                    <div class="Polaris-ResourceItem" data-href="#">
+                                        <a aria-describedby="200" aria-label="View details for Students"
+                                            class="Polaris-ResourceItem__Link" tabindex="0" id=":R6ikq6:" href="#"
+                                            data-polaris-unstyled="true">
+                                        </a>
+                                        <div class="Polaris-Box" id="200"
+                                            style="--pc-box-padding-block-start-xs:var(--p-space-300);--pc-box-padding-block-end-xs:var(--p-space-300);--pc-box-padding-inline-start-xs:var(--p-space-300);--pc-box-padding-inline-end-xs:var(--p-space-300);position:relative;z-index:var(--pc-resource-item-content-stacking-order)">
+                                            <div class="Polaris-InlineGrid"
+                                                style="--pc-inline-grid-grid-template-columns-xs:1fr auto">
+                                                <div class="Polaris-InlineGrid"
+                                                    style="--pc-inline-grid-grid-template-columns-xs:auto 1fr;--pc-inline-grid-gap-xs:var(--p-space-300)">
+                                                    <div class="Polaris-InlineStack"
+                                                        style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
+                                                        <span aria-label="Students" role="img"
+                                                            class="Polaris-Avatar Polaris-Avatar--sizeMd">
+                                                            <span class="Polaris-Avatar__Initials">
+                                                                <svg width="20" height="21" viewBox="0 0 20 21"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M6.50006 6.81747C6.50006 4.88448 8.06706 3.31747 10.0001 3.31747C11.9331 3.31747 13.5001 4.88448 13.5001 6.81747C13.5001 8.75047 11.9331 10.3175 10.0001 10.3175C8.06706 10.3175 6.50006 8.75047 6.50006 6.81747Z"
+                                                                        fill="#4A4A4A" />
+                                                                    <path
+                                                                        d="M4.51609 14.5443C5.62253 12.5527 7.72175 11.3175 10.0001 11.3175C12.2784 11.3175 14.3776 12.5527 15.484 14.5443L15.9207 15.3302C16.416 16.2218 15.7713 17.3175 14.7514 17.3175H5.24873C4.22881 17.3175 3.58412 16.2218 4.07943 15.3302L4.51609 14.5443Z"
+                                                                        fill="#4A4A4A" />
+                                                                </svg>
+
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="Polaris-InlineStack"
+                                                        style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-flex-direction-xs:row">
+                                                        <div class="Polaris-Box"
+                                                            style="--pc-box-padding-block-start-xs:var(--p-space-0);--pc-box-padding-block-end-xs:var(--p-space-0);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0);--pc-box-width:100%">
+                                                            <h3
+                                                                class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">
+                                                                Students</h3>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="Polaris-ResourceItem__ListItem">
+                                <div class="Polaris-ResourceItem__ItemWrapper">
+                                    <div class="Polaris-ResourceItem" data-href="#">
+                                        <a aria-describedby="300" aria-label="View details for Students"
+                                            class="Polaris-ResourceItem__Link" tabindex="0" id=":R6ikq6:" href="#"
+                                            data-polaris-unstyled="true">
+                                        </a>
+                                        <div class="Polaris-Box" id="300"
+                                            style="--pc-box-padding-block-start-xs:var(--p-space-300);--pc-box-padding-block-end-xs:var(--p-space-300);--pc-box-padding-inline-start-xs:var(--p-space-300);--pc-box-padding-inline-end-xs:var(--p-space-300);position:relative;z-index:var(--pc-resource-item-content-stacking-order)">
+                                            <div class="Polaris-InlineGrid"
+                                                style="--pc-inline-grid-grid-template-columns-xs:1fr auto">
+                                                <div class="Polaris-InlineGrid"
+                                                    style="--pc-inline-grid-grid-template-columns-xs:auto 1fr;--pc-inline-grid-gap-xs:var(--p-space-300)">
+                                                    <div class="Polaris-InlineStack"
+                                                        style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
+                                                        <span aria-label="Students" role="img"
+                                                            class="Polaris-Avatar Polaris-Avatar--sizeMd">
+                                                            <span class="Polaris-Avatar__Initials">
+                                                                <svg width="20" height="20" viewBox="0 0 14 15"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M7 14.3175C7.91925 14.3175 8.8295 14.1364 9.67878 13.7846C10.5281 13.4328 11.2997 12.9172 11.9497 12.2672C12.5998 11.6172 13.1154 10.8455 13.4672 9.99626C13.8189 9.14698 14 8.23673 14 7.31747C14 6.39822 13.8189 5.48797 13.4672 4.63869C13.1154 3.78941 12.5998 3.01774 11.9497 2.36773C11.2997 1.71772 10.5281 1.2021 9.67878 0.850318C8.8295 0.498535 7.91925 0.317474 7 0.317474C5.14348 0.317474 3.36301 1.05497 2.05025 2.36773C0.737498 3.68048 0 5.46096 0 7.31747C0 9.17399 0.737498 10.9545 2.05025 12.2672C3.36301 13.58 5.14348 14.3175 7 14.3175ZM6.5 3.81747C6.5 3.61856 6.57902 3.4278 6.71967 3.28714C6.86032 3.14649 7.05109 3.06747 7.25 3.06747C7.44891 3.06747 7.63968 3.14649 7.78033 3.28714C7.92098 3.4278 8 3.61856 8 3.81747V4.06747H8.75C8.94891 4.06747 9.13968 4.14649 9.28033 4.28714C9.42098 4.4278 9.5 4.61856 9.5 4.81747C9.5 5.01639 9.42098 5.20715 9.28033 5.3478C9.13968 5.48846 8.94891 5.56747 8.75 5.56747H6.5C6.36739 5.56747 6.24021 5.62015 6.14645 5.71392C6.05268 5.80769 6 5.93487 6 6.06747C6 6.20008 6.05268 6.32726 6.14645 6.42103C6.24021 6.5148 6.36739 6.56747 6.5 6.56747H7.5C8.03043 6.56747 8.53914 6.77819 8.91421 7.15326C9.28929 7.52833 9.5 8.03704 9.5 8.56747C9.5 9.09791 9.28929 9.60662 8.91421 9.98169C8.53914 10.3568 8.03043 10.5675 7.5 10.5675V10.8175C7.5 11.0164 7.42098 11.2072 7.28033 11.3478C7.13968 11.4885 6.94891 11.5675 6.75 11.5675C6.55109 11.5675 6.36032 11.4885 6.21967 11.3478C6.07902 11.2072 6 11.0164 6 10.8175V10.5675H5.25C5.05109 10.5675 4.86032 10.4885 4.71967 10.3478C4.57902 10.2072 4.5 10.0164 4.5 9.81747C4.5 9.61856 4.57902 9.4278 4.71967 9.28714C4.86032 9.14649 5.05109 9.06747 5.25 9.06747H7.5C7.63261 9.06747 7.75979 9.0148 7.85355 8.92103C7.94732 8.82726 8 8.70008 8 8.56747C8 8.43487 7.94732 8.30769 7.85355 8.21392C7.75979 8.12015 7.63261 8.06747 7.5 8.06747H6.5C5.96957 8.06747 5.46086 7.85676 5.08579 7.48169C4.71071 7.10661 4.5 6.59791 4.5 6.06747C4.5 5.53704 4.71071 5.02833 5.08579 4.65326C5.46086 4.27819 5.96957 4.06747 6.5 4.06747V3.81747Z"
+                                                                        fill="#4A4A4A" />
+                                                                </svg>
+
+
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="Polaris-InlineStack"
+                                                        style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-flex-direction-xs:row">
+                                                        <div class="Polaris-Box"
+                                                            style="--pc-box-padding-block-start-xs:var(--p-space-0);--pc-box-padding-block-end-xs:var(--p-space-0);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0);--pc-box-width:100%">
+                                                            <h3
+                                                                class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">
+                                                                Payments</h3>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="Polaris-ResourceItem__ListItem">
+                                <div class="Polaris-ResourceItem__ItemWrapper">
+                                    <div class="Polaris-ResourceItem" data-href="#">
+                                        <a aria-describedby="400" aria-label="View details for Students"
+                                            class="Polaris-ResourceItem__Link" tabindex="0" id=":R6ikq6:" href="#"
+                                            data-polaris-unstyled="true">
+                                        </a>
+                                        <div class="Polaris-Box" id="400"
+                                            style="--pc-box-padding-block-start-xs:var(--p-space-300);--pc-box-padding-block-end-xs:var(--p-space-300);--pc-box-padding-inline-start-xs:var(--p-space-300);--pc-box-padding-inline-end-xs:var(--p-space-300);position:relative;z-index:var(--pc-resource-item-content-stacking-order)">
+                                            <div class="Polaris-InlineGrid"
+                                                style="--pc-inline-grid-grid-template-columns-xs:1fr auto">
+                                                <div class="Polaris-InlineGrid"
+                                                    style="--pc-inline-grid-grid-template-columns-xs:auto 1fr;--pc-inline-grid-gap-xs:var(--p-space-300)">
+                                                    <div class="Polaris-InlineStack"
+                                                        style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
+                                                        <span aria-label="Students" role="img"
+                                                            class="Polaris-Avatar Polaris-Avatar--sizeMd">
+                                                            <span class="Polaris-Avatar__Initials">
+                                                                <svg width="20" height="20" viewBox="0 0 14 14"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M5.57473 1.96632C6.28162 1.23224 7.25683 0.817474 8.27593 0.817474H10.25C12.0449 0.817474 13.5 2.27255 13.5 4.06747V6.2542C13.5 7.13742 13.1405 7.98261 12.5043 8.59524L7.75724 13.1665C6.77593 14.1115 5.21868 14.0968 4.25537 13.1335L1.35746 10.2356C0.297817 9.17595 0.281656 7.46297 1.32112 6.38353L5.57473 1.96632ZM10 5.31747C10.5523 5.31747 11 4.86976 11 4.31747C11 3.76519 10.5523 3.31747 10 3.31747C9.44771 3.31747 9 3.76519 9 4.31747C9 4.86976 9.44771 5.31747 10 5.31747Z"
+                                                                        fill="#4A4A4A" />
+                                                                </svg>
+
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="Polaris-InlineStack"
+                                                        style="--pc-inline-stack-block-align:start;--pc-inline-stack-wrap:wrap;--pc-inline-stack-flex-direction-xs:row">
+                                                        <div class="Polaris-Box"
+                                                            style="--pc-box-padding-block-start-xs:var(--p-space-0);--pc-box-padding-block-end-xs:var(--p-space-0);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0);--pc-box-width:100%">
+                                                            <h3
+                                                                class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">
+                                                                Reminders</h3>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar_footer">
+                <a href="#" class="link">
+                    <svg width="20" height="20" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.50006 6.81747C6.50006 4.88448 8.06706 3.31747 10.0001 3.31747C11.9331 3.31747 13.5001 4.88448 13.5001 6.81747C13.5001 8.75047 11.9331 10.3175 10.0001 10.3175C8.06706 10.3175 6.50006 8.75047 6.50006 6.81747Z"
+                            fill="#4A4A4A" />
+                        <path
+                            d="M4.51609 14.5443C5.62253 12.5527 7.72175 11.3175 10.0001 11.3175C12.2784 11.3175 14.3776 12.5527 15.484 14.5443L15.9207 15.3302C16.416 16.2218 15.7713 17.3175 14.7514 17.3175H5.24873C4.22881 17.3175 3.58412 16.2218 4.07943 15.3302L4.51609 14.5443Z"
+                            fill="#4A4A4A" />
+                    </svg>
+
+                    logout</a>
+            </div>
+
+        </aside>
+        <div class="homescreen_grid">
+            <div class="right_sidebar_parent grid_item">
+                <div class="Polaris-FullscreenBar transparent_bg">
+
+                    <div
+                        style="display:flex;flex-grow:1;justify-content:space-between;align-items:center;padding-left:1rem;padding-right:1rem">
+                        <div class="sidebar-menu-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1" width="20" height="20" viewBox="0 0 256 256" xml:space="preserve">
+                                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                                    transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                                    <path
+                                        d="M 76.704 90 H 13.296 C 5.964 90 0 84.035 0 76.704 V 13.296 C 0 5.964 5.964 0 13.296 0 h 63.408 C 84.035 0 90 5.964 90 13.296 v 63.408 C 90 84.035 84.035 90 76.704 90 z M 13.296 6 C 9.273 6 6 9.273 6 13.296 v 63.408 C 6 80.728 9.273 84 13.296 84 h 63.408 C 80.728 84 84 80.728 84 76.704 V 13.296 C 84 9.273 80.728 6 76.704 6 H 13.296 z"
+                                        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                        transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                    <path
+                                        d="M 70.086 27.955 H 19.914 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 h 50.172 c 1.657 0 3 1.343 3 3 S 71.743 27.955 70.086 27.955 z"
+                                        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                        transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                    <path
+                                        d="M 70.086 48 H 19.914 c -1.657 0 -3 -1.343 -3 -3 c 0 -1.657 1.343 -3 3 -3 h 50.172 c 1.657 0 3 1.343 3 3 C 73.086 46.657 71.743 48 70.086 48 z"
+                                        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                        transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                    <path
+                                        d="M 70.086 68.046 H 19.914 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 h 50.172 c 1.657 0 3 1.343 3 3 S 71.743 68.046 70.086 68.046 z"
+                                        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                        transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div style="margin-left:1rem;flex-grow:1">
+                            <p class="Polaris-Text--root Polaris-Text--headingLg">Dashboard</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="edit-student-container">
+                        <div class="Polaris-Box tabs_container"
+                            style="--pc-box-padding-block-start-md:var(--p-space-200);--pc-box-padding-block-end-md:var(--p-space-200);--pc-box-padding-inline-start-md:var(--p-space-200);--pc-box-padding-inline-end-md:var(--p-space-200)">
+                            <div class="Polaris-Tabs Polaris-Tabs__TabsMeasurer">
+                                <li class="Polaris-Tabs__TabContainer" role="presentation">
+                                    <button id="all-customers-1Measurer"
+                                        class="Polaris-Tabs__Tab Polaris-Tabs__Tab--active" role="tab" type="button"
+                                        tabindex="-1" aria-selected="true">
+                                        <div class="Polaris-InlineStack"
+                                            style="--pc-inline-stack-align:center;--pc-inline-stack-block-align:center;--pc-inline-stack-wrap:nowrap;--pc-inline-stack-gap-xs:var(--p-space-200);--pc-inline-stack-flex-direction-xs:row">
+                                            <span
+                                                class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">All</span>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li class="Polaris-Tabs__TabContainer" role="presentation">
+                                    <button id="accepts-marketing-1Measurer" class="Polaris-Tabs__Tab" role="tab"
+                                        type="button" tabindex="-1" aria-selected="false">
+                                        <div class="Polaris-InlineStack"
+                                            style="--pc-inline-stack-align:center;--pc-inline-stack-block-align:center;--pc-inline-stack-wrap:nowrap;--pc-inline-stack-gap-xs:var(--p-space-200);--pc-inline-stack-flex-direction-xs:row">
+                                            <span
+                                                class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Accepts
+                                                marketing</span>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li class="Polaris-Tabs__TabContainer" role="presentation">
+                                    <button id="repeat-customers-1Measurer" class="Polaris-Tabs__Tab" role="tab"
+                                        type="button" tabindex="-1" aria-selected="false">
+                                        <div class="Polaris-InlineStack"
+                                            style="--pc-inline-stack-align:center;--pc-inline-stack-block-align:center;--pc-inline-stack-wrap:nowrap;--pc-inline-stack-gap-xs:var(--p-space-200);--pc-inline-stack-flex-direction-xs:row">
+                                            <span
+                                                class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Repeat
+                                                customers</span>
+                                        </div>
+                                    </button>
+                                </li>
+                                <button class="Polaris-Tabs__DisclosureActivator" aria-label="More views" type="button">
+                                    <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">More
+                                        views</span>
+                                    <div class="">
+                                        <span class="Polaris-Icon Polaris-Icon--toneSubdued">
+                                            <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false"
+                                                aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                    d="M5.72 8.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.75.75 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="Polaris-Tabs__Wrapper">
+                                <div class="Polaris-Tabs__ButtonWrapper">
+                                    <ul class="Polaris-Tabs" data-tabs-focus-catchment="true" role="tablist">
+                                        <li class="Polaris-Tabs__TabContainer" role="presentation">
+                                            <button id="all-customers-1" class="Polaris-Tabs__Tab "
+                                                aria-label="All customers" role="tab" type="button"
+                                                aria-controls="all-customers-content-1" tabindex="0"
+                                                aria-selected="true">
+                                                <div class="Polaris-InlineStack"
+                                                    style="--pc-inline-stack-align: center; --pc-inline-stack-block-align: center; --pc-inline-stack-wrap: nowrap; --pc-inline-stack-gap-xs: var(--p-space-200); --pc-inline-stack-flex-direction-xs: row;">
+                                                    <span
+                                                        class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Profile</span>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="Polaris-Tabs__TabContainer Polaris-Tabs__Tab--active"
+                                            role="presentation">
+                                            <button id="accepts-marketing-1" class="Polaris-Tabs__Tab" role="tab"
+                                                type="button" aria-controls="accepts-marketing-content-1" tabindex="-1"
+                                                aria-selected="false">
+                                                <div class="Polaris-InlineStack"
+                                                    style="--pc-inline-stack-align: center; --pc-inline-stack-block-align: center; --pc-inline-stack-wrap: nowrap; --pc-inline-stack-gap-xs: var(--p-space-200); --pc-inline-stack-flex-direction-xs: row;">
+                                                    <span
+                                                        class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Payment
+                                                        Plan</span>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="Polaris-Tabs__TabContainer" role="presentation">
+                                            <button id="repeat-customers-1" class="Polaris-Tabs__Tab" role="tab"
+                                                type="button" aria-controls="repeat-customers-content-1" tabindex="-1"
+                                                aria-selected="false">
+                                                <div class="Polaris-InlineStack"
+                                                    style="--pc-inline-stack-align: center; --pc-inline-stack-block-align: center; --pc-inline-stack-wrap: nowrap; --pc-inline-stack-gap-xs: var(--p-space-200); --pc-inline-stack-flex-direction-xs: row;">
+                                                    <span
+                                                        class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Parents</span>
+                                                </div>
+                                            </button>
+                                        </li>
+
+                                        <li class="Polaris-Tabs__DisclosureTab" role="presentation">
+                                            <div>
+                                                <button class="Polaris-Tabs__DisclosureActivator"
+                                                    aria-label="More views" type="button" tabindex="0"
+                                                    aria-controls=":r0:" aria-owns=":r0:" aria-expanded="false"
+                                                    data-state="closed">
+                                                    <span
+                                                        class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">More
+                                                        views</span>
+                                                    <div class="">
+                                                        <span class="Polaris-Icon Polaris-Icon--toneSubdued">
+                                                            <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg"
+                                                                focusable="false" aria-hidden="true">
+                                                                <path fill-rule="evenodd"
+                                                                    d="M5.72 8.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.75.75 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06Z">
+                                                                </path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Polaris-Tabs__Outer tabs_item_container">
+                            <div class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden" id="all-customers-content-1"
+                                role="tabpanel" aria-labelledby="all-customers-1" tabindex="-1">
+                                <div class="Polaris-LegacyCard__Section">
+                                    <div class="Polaris-BlockStack"
+                                        style="--pc-block-stack-order:column;--pc-block-stack-gap-xs:var(--p-space-400)">
+                                        <div class="Polaris-BlockStack"
+                                            style="--pc-block-stack-order:column;--pc-block-stack-gap-xs:var(--p-space-200)"
+                                            role="group">
+                                            <div class="Polaris-InlineStack"
+                                                style="--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
+                                                <div class="Polaris-FormLayout__Item Polaris-FormLayout--condensed">
+                                                    <div class="">
+                                                        <div class="Polaris-Labelled__LabelWrapper">
+                                                            <div class="Polaris-Label">
+                                                                <label id=":R1mq6:Label" for=":R1mq6:"
+                                                                    class="Polaris-Label__Text">
+                                                                    <span
+                                                                        class="Polaris-Text--root Polaris-Text--bodyMd">Name</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Polaris-Connected">
+                                                            <div
+                                                                class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                                                <div class="Polaris-TextField">
+                                                                    <input id=":R1mq6:" autocomplete="off"
+                                                                        class="Polaris-TextField__Input" type="text"
+                                                                        aria-labelledby=":R1mq6:Label"
+                                                                        aria-invalid="false" data-1p-ignore="true"
+                                                                        data-lpignore="true" data-form-type="other"
+                                                                        value="" placeholder="John">
+                                                                    <div class="Polaris-TextField__Backdrop">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="Polaris-FormLayout__Item Polaris-FormLayout--condensed">
+                                                    <div class="">
+                                                        <div class="Polaris-Labelled__LabelWrapper">
+                                                            <div class="Polaris-Label">
+                                                                <label id=":R2mq6:Label" for=":R2mq6:"
+                                                                    class="Polaris-Label__Text">
+                                                                    <span
+                                                                        class="Polaris-Text--root Polaris-Text--bodyMd">Contact</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Polaris-Connected">
+                                                            <div
+                                                                class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                                                <div class="Polaris-TextField">
+                                                                    <input id=":R2mq6:" autocomplete="off"
+                                                                        class="Polaris-TextField__Input" type="tel"
+                                                                        aria-labelledby=":R2mq6:Label"
+                                                                        aria-invalid="false" data-1p-ignore="true"
+                                                                        data-lpignore="true" data-form-type="other"
+                                                                        value="" placeholder="1234567890">
+                                                                    <div class="Polaris-TextField__Backdrop">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="Polaris-FormLayout__Item Polaris-FormLayout--condensed">
+                                                    <div class="">
+                                                        <div class="Polaris-Labelled__LabelWrapper">
+                                                            <div class="Polaris-Label">
+                                                                <label id=":R3mq6:Label" for=":R3mq6:"
+                                                                    class="Polaris-Label__Text">
+                                                                    <span
+                                                                        class="Polaris-Text--root Polaris-Text--bodyMd">Parent
+                                                                        1 email</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Polaris-Connected">
+                                                            <div
+                                                                class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                                                <div class="Polaris-TextField">
+                                                                    <input id=":R3mq6:" autocomplete="off"
+                                                                        class="Polaris-TextField__Input" type="email"
+                                                                        aria-labelledby=":R3mq6:Label"
+                                                                        aria-invalid="false" data-1p-ignore="true"
+                                                                        data-lpignore="true" data-form-type="other"
+                                                                        value="" placeholder="example@gmail.com">
+                                                                    <div class="Polaris-TextField__Backdrop">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="Polaris-FormLayout__Item Polaris-FormLayout--condensed">
+                                                    <div class="">
+                                                        <div class="Polaris-Labelled__LabelWrapper">
+                                                            <div class="Polaris-Label">
+                                                                <label id=":R4mq6:Label" for=":R4mq6:"
+                                                                    class="Polaris-Label__Text">
+                                                                    <span
+                                                                        class="Polaris-Text--root Polaris-Text--bodyMd">Parent
+                                                                        2 email</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Polaris-Connected">
+                                                            <div
+                                                                class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                                                <div class="Polaris-TextField">
+                                                                    <input id=":R4mq6:" autocomplete="off"
+                                                                        class="Polaris-TextField__Input" type="email"
+                                                                        aria-labelledby=":R4mq6:Label"
+                                                                        aria-invalid="false" data-1p-ignore="true"
+                                                                        data-lpignore="true" data-form-type="other"
+                                                                        value="" placeholder="example@gmail.com">
+                                                                    <div class="Polaris-TextField__Backdrop">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="">
+                                                    <div class="Polaris-Labelled__LabelWrapper">
+                                                        <div class="Polaris-Label">
+                                                            <label id=":Rq6:Label" for=":Rq6:"
+                                                                class="Polaris-Label__Text">
+                                                                <span
+                                                                    class="Polaris-Text--root Polaris-Text--bodyMd">Class</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="Polaris-Select">
+                                                        <select id=":Rq6:" class="Polaris-Select__Input"
+                                                            aria-invalid="false">
+                                                            <option value="today" selected="">Intermediate Ballet
+                                                            </option>
+                                                            <option value="yesterday">Intermediate Ballet</option>
+                                                            <option value="lastWeek">Intermediate Ballet</option>
+                                                        </select>
+                                                        <div class="Polaris-Select__Content" aria-hidden="true">
+                                                            <span class="Polaris-Select__SelectedOption">Intermediate
+                                                                Ballet</span>
+                                                            <span class="Polaris-Select__Icon">
+                                                                <span class="Polaris-Icon">
+                                                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg"
+                                                                        focusable="false" aria-hidden="true">
+                                                                        <path
+                                                                            d="M10.884 4.323a1.25 1.25 0 0 0-1.768 0l-2.646 2.647a.75.75 0 0 0 1.06 1.06l2.47-2.47 2.47 2.47a.75.75 0 1 0 1.06-1.06l-2.646-2.647Z">
+                                                                        </path>
+                                                                        <path
+                                                                            d="m13.53 13.03-2.646 2.647a1.25 1.25 0 0 1-1.768 0l-2.646-2.647a.75.75 0 0 1 1.06-1.06l2.47 2.47 2.47-2.47a.75.75 0 0 1 1.06 1.06Z">
+                                                                        </path>
+                                                                    </svg>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="Polaris-Select__Backdrop">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Polaris-ButtonGroup">
+                                    <div class="Polaris-ButtonGroup__Item">
+                                        <button
+                                            class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                                            type="button">
+                                            <span
+                                                class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
+                                        </button>
+                                    </div>
+                                    <div class="Polaris-ButtonGroup__Item">
+                                        <button
+                                            class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                                            type="button">
+                                            <span
+                                                class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Save</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Polaris-Tabs__Panel " id="accepts-marketing-content-1" role="tabpanel"
+                                aria-labelledby="accepts-marketing-1" tabindex="-1">
+                                <div class="Polaris-ShadowBevel"
+                                    style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
+                                    <div class="Polaris-Box"
+                                        style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
+                                        <h2 class="Polaris-Text--root Polaris-Text--bold">Drag & Drop Installments</h2>
+                                        <div class="Polaris-ShadowBevel"
+                                            style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
+                                            <div class="accepts-marketing-content first-box Polaris-Box"
+                                                style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
+                                                <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Sep 1, 2024</h2>
+                                                <p class="Polaris-Text--root Polaris-Text--bodyLg">$100 <span
+                                                        class="editicon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z" />
+                                                        </svg></span></p>
+
+                                            </div>
+                                            <div class="Polaris-Box date-and-price-edit">
+                                                <div class="Polaris-BlockStack"
+                                                    style="--pc-block-stack-order:column;--pc-block-stack-gap-xs:var(--p-space-400)">
+                                                    <div class="Polaris-BlockStack"
+                                                        style="--pc-block-stack-order:column;--pc-block-stack-gap-xs:var(--p-space-200)"
+                                                        role="group">
+                                                        <div class="Polaris-InlineStack"
+                                                            style="--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
+                                                            <div
+                                                                class="Polaris-FormLayout__Item Polaris-FormLayout--grouped">
+                                                                <div class="">
+                                                                    <div class="Polaris-Labelled__LabelWrapper">
+                                                                        <div class="Polaris-Label">
+                                                                            <label id=":R1mq6:Label" for=":R1mq6:"
+                                                                                class="Polaris-Label__Text">
+                                                                                <span
+                                                                                    class="Polaris-Text--root Polaris-Text--bodyMd">Edit
+                                                                                    Date</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="Polaris-Connected">
+                                                                        <div
+                                                                            class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                                                            <div class="Polaris-TextField ">
+                                                                                <input id=":R1mq6:" autocomplete="off"
+                                                                                    class="Polaris-TextField__Input"
+                                                                                    type="date"
+                                                                                    aria-labelledby=":R1mq6:Label"
+                                                                                    aria-invalid="false"
+                                                                                    data-1p-ignore="true"
+                                                                                    data-lpignore="true"
+                                                                                    data-form-type="other"
+                                                                                    value="2024-09-01"
+                                                                                    style="display: block;">
+
+                                                                                <div
+                                                                                    class="Polaris-TextField__Backdrop">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="Polaris-FormLayout__Item Polaris-FormLayout--grouped">
+                                                                <div class="">
+                                                                    <div class="Polaris-Labelled__LabelWrapper">
+                                                                        <div class="Polaris-Label">
+                                                                            <label id=":R2mq6:Label" for=":R2mq6:"
+                                                                                class="Polaris-Label__Text">
+                                                                                <span
+                                                                                    class="Polaris-Text--root Polaris-Text--bodyMd">Edit
+                                                                                    Price</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="Polaris-Connected">
+                                                                        <div
+                                                                            class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                                                            <div class="Polaris-TextField">
+                                                                                <span style="    z-index: 999;
+                                                                                width: 20px;
+                                                                                height: 20px;
+                                                                                padding-left: 5px;">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="20" height="20"
+                                                                                        viewBox="0 0 20 20" fill="none">
+                                                                                        <path
+                                                                                            d="M9.5 6.5C9.5 6.30109 9.57902 6.11032 9.71967 5.96967C9.86032 5.82902 10.0511 5.75 10.25 5.75C10.4489 5.75 10.6397 5.82902 10.7803 5.96967C10.921 6.11032 11 6.30109 11 6.5V6.75H11.75C11.9489 6.75 12.1397 6.82902 12.2803 6.96967C12.421 7.11032 12.5 7.30109 12.5 7.5C12.5 7.69891 12.421 7.88968 12.2803 8.03033C12.1397 8.17098 11.9489 8.25 11.75 8.25H9.5C9.36739 8.25 9.24021 8.30268 9.14645 8.39645C9.05268 8.49021 9 8.61739 9 8.75C9 8.88261 9.05268 9.00979 9.14645 9.10355C9.24021 9.19732 9.36739 9.25 9.5 9.25H10.5C11.0304 9.25 11.5391 9.46071 11.9142 9.83579C12.2893 10.2109 12.5 10.7196 12.5 11.25C12.5 11.7804 12.2893 12.2891 11.9142 12.6642C11.5391 13.0393 11.0304 13.25 10.5 13.25V13.5C10.5 13.6989 10.421 13.8897 10.2803 14.0303C10.1397 14.171 9.94891 14.25 9.75 14.25C9.55109 14.25 9.36032 14.171 9.21967 14.0303C9.07902 13.8897 9 13.6989 9 13.5V13.25H8.25C8.05109 13.25 7.86032 13.171 7.71967 13.0303C7.57902 12.8897 7.5 12.6989 7.5 12.5C7.5 12.3011 7.57902 12.1103 7.71967 11.9697C7.86032 11.829 8.05109 11.75 8.25 11.75H10.5C10.6326 11.75 10.7598 11.6973 10.8536 11.6036C10.9473 11.5098 11 11.3826 11 11.25C11 11.1174 10.9473 10.9902 10.8536 10.8964C10.7598 10.8027 10.6326 10.75 10.5 10.75H9.5C8.96957 10.75 8.46086 10.5393 8.08579 10.1642C7.71071 9.78914 7.5 9.28043 7.5 8.75C7.5 8.21957 7.71071 7.71086 8.08579 7.33579C8.46086 6.96071 8.96957 6.75 9.5 6.75V6.5Z"
+                                                                                            fill="#9F9F9F" />
+                                                                                        <path fill-rule="evenodd"
+                                                                                            clip-rule="evenodd"
+                                                                                            d="M17 10C17 10.9193 16.8189 11.8295 16.4672 12.6788C16.1154 13.5281 15.5998 14.2997 14.9497 14.9497C14.2997 15.5998 13.5281 16.1154 12.6788 16.4672C11.8295 16.8189 10.9193 17 10 17C9.08075 17 8.1705 16.8189 7.32122 16.4672C6.47194 16.1154 5.70026 15.5998 5.05025 14.9497C4.40024 14.2997 3.88463 13.5281 3.53284 12.6788C3.18106 11.8295 3 10.9193 3 10C3 8.14348 3.7375 6.36301 5.05025 5.05025C6.36301 3.7375 8.14348 3 10 3C11.8565 3 13.637 3.7375 14.9497 5.05025C16.2625 6.36301 17 8.14348 17 10ZM15.5 10C15.5 11.4587 14.9205 12.8576 13.8891 13.8891C12.8576 14.9205 11.4587 15.5 10 15.5C8.54131 15.5 7.14236 14.9205 6.11091 13.8891C5.07946 12.8576 4.5 11.4587 4.5 10C4.5 8.54131 5.07946 7.14236 6.11091 6.11091C7.14236 5.07946 8.54131 4.5 10 4.5C11.4587 4.5 12.8576 5.07946 13.8891 6.11091C14.9205 7.14236 15.5 8.54131 15.5 10Z"
+                                                                                            fill="#9F9F9F" />
+                                                                                    </svg>
+                                                                                </span>
+                                                                                <input id=":R2mq6:" autocomplete="off"
+                                                                                    class="Polaris-TextField__Input"
+                                                                                    type="number"
+                                                                                    aria-labelledby=":R2mq6:Label"
+                                                                                    aria-invalid="false"
+                                                                                    data-1p-ignore="true"
+                                                                                    data-lpignore="true"
+                                                                                    data-form-type="other" value=""
+                                                                                    placeholder="100">
+
+                                                                                <div
+                                                                                    class="Polaris-TextField__Backdrop">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="Polaris-ShadowBevel"
+                                            style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
+                                            <div class="accepts-marketing-content Polaris-Box"
+                                                style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
+                                                <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Dec 1, 2024</h2>
+                                                <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
+                                                        class="editicon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z" />
+                                                        </svg></span></p>
+
+                                            </div>
+                                        </div>
+                                        <div class="Polaris-ShadowBevel"
+                                            style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
+                                            <div class="accepts-marketing-content Polaris-Box"
+                                                style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
+                                                <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Mar 1, 2025</h2>
+                                                <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
+                                                        class="editicon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z" />
+                                                        </svg></span></p>
+
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="margin-top-item Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                                            type="button">
+                                            <span
+                                                class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Add
+                                                Installment</span>
+                                        </button>
+                                        <ul class="margin-top-item Polaris-List Polaris-List--spacingLoose">
+                                            <li class="Polaris-List__Item">Cannot drag before previous installment</li>
+                                            <li class="Polaris-List__Item">Must maintain <span
+                                                    class="Polaris-Text--bold">14-day gap</span> minimum</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="Polaris-ShadowBevel"
+                                    style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
+                                    <div class="Polaris-Box"
+                                        style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
+                                        <h2 class="Polaris-Text--root Polaris-Text--bold">Drag & Drop Installments</h2>
+
+                                        <div class="Polaris-ShadowBevel"
+                                            style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
+                                            <div class="accepts-marketing-content Polaris-Box"
+                                                style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
+                                                <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Dec 1, 2024</h2>
+                                                <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
+                                                        class="editicon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z" />
+                                                        </svg></span></p>
+
+                                            </div>
+                                        </div>
+                                        <div class="Polaris-ShadowBevel"
+                                            style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
+                                            <div class="accepts-marketing-content Polaris-Box"
+                                                style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
+                                                <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Mar 1, 2025</h2>
+                                                <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
+                                                        class="editicon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z" />
+                                                        </svg></span></p>
+
+                                            </div>
+                                        </div>
+                                        <div class="Polaris-ShadowBevel"
+                                            style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
+                                            <div class="accepts-marketing-content Polaris-Box"
+                                                style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
+                                                <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Mar 1, 2025</h2>
+                                                <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
+                                                        class="editicon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z" />
+                                                        </svg></span></p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden" id="repeat-customers-content-1"
+                                role="tabpanel" aria-labelledby="repeat-customers-1" tabindex="-1">
+                            </div>
+                            <div class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden" id="prospects-content-1"
+                                role="tabpanel" aria-labelledby="prospects-1" tabindex="-1">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right_footer_section">
+                    <div class="policies_link">
+                        <span>© All Rights Reserved | IDA Dance Store App | 2024-25</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll(".sidebar-toggler, .sidebar-menu-button").forEach((button) => {
+            button.addEventListener("click", () => {
+                document.querySelector(".sidebar_container").classList.toggle("collapsed");
+            });
+        });
+
+        if (window.innerWidth <= 786) document.querySelector(".sidebar_container").classList.add("collapsed");
+    </script>
+
+</body>
+
+</html>

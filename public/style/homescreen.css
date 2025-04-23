@@ -1,7 +1,4 @@
-.homescreen_grid {
-   display: flex;
-    width: 100%;
-}
+
 
 .grid_item {
     width: 100%;
@@ -18,7 +15,7 @@
     min-width: 240px;
 }
 
-.homescreen_grid img.logo {
+.sidebar_container img.logo {
     max-width: 100%;
 }
 
@@ -37,11 +34,25 @@
 
 .badges_conatiner {
     display: flex;
+    flex-wrap: wrap;
 }
-
+ 
 .info_container {
-    max-width: 950px;
     margin: 0 auto;
+    padding: 20px 0;
+    max-height: 600px;
+    overflow: auto;
+    padding-bottom: 50px;
+    top: 50px;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding-bottom: 30px;
+    width: 100%;
+    padding: 0 1.5rem 3rem;
 }
 
 .badges_conatiner .Polaris-Text--root {
@@ -203,15 +214,23 @@
 }
 
 .right_footer_section {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    left: 0;
-    width: 100%;
-
+    right: 0;
+    width: calc(100% - 240px);
     background-color: #F6F6F7;
     display: flex;
     justify-content: center;
 }
+
+.right_sidebar_parent .Polaris-FullscreenBar.transparent_bg {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: #f1f2f4;
+}
+
 
 .right_sidebar_parent.grid_item {
     position: relative;
@@ -223,8 +242,19 @@
 }
 
 /* responsive start homescreen dashboard start */
+@media only screen and (min-width: 992px) {
+    .info_container {
+        max-width: 950px;
+    }
+}
 
 @media only screen and (min-width: 786px) {
+    .homescreen_grid {
+        display: flex;
+        width: calc(100% - 240px);
+        position: relative;
+        left: 240px;
+    }
 
     .sidebar-menu-button,
     .sidebar-toggler {
@@ -232,7 +262,12 @@
     }
 
     aside.sidebar_container {
-        position: relative;
+        position: fixed;
+        max-width: 240px;
+    }
+
+    .right_footer_section {      
+        width: calc(100% - 240px);        
     }
 
 }
@@ -247,21 +282,28 @@
         padding: 0 20px;
     }
 
-    .info_container {
-        
-        padding: 20px 0;
-    }
+    
 }
 
 @media only screen and (max-width: 786px) {
+    .right_footer_section {
+    
+        width: 100%;
+       
+    }
+    
+    .right_sidebar_parent.grid_item {
+        position: static;
+        padding: 20px 0;
+        overflow: hidden;
+    }
+
+
     .right_sidebar_parent.grid_item {
         position: static;
         padding: 20px 0;
     }
-    .right_footer_section {
-        position: fixed;
-        
-    }
+    
     .right_footer_section .policies_link {
         
         text-align: center;
@@ -280,7 +322,7 @@
 
     .badge_parent {
         max-width: fit-content;
-        padding: 12px 12px 0 0;
+        padding: 12px 5px 0 0;
     }
 
 
