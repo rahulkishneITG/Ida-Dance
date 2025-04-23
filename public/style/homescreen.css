@@ -38,8 +38,7 @@
 }
  
 .info_container {
-    margin: 0 auto;
-    padding: 20px 0;
+    margin: 0 auto;   
     max-height: 600px;
     overflow: auto;
     padding-bottom: 50px;
@@ -308,8 +307,7 @@
         
         text-align: center;
     }
-    .sidebar-menu-button,
-    .sidebar-toggler {
+    .sidebar-menu-button , .sidebar-toggler {
         display: inline-flex;
     }
 

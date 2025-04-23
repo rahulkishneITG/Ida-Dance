@@ -100,3 +100,10 @@
       .hidden{
         display: none !important;
       }
+
+      .align_end{
+        text-align: end;
+       }
+       .full_width_wrapper {
+        width: 100%;
+    }

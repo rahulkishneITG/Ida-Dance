@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="./style/global.css">
     <link rel="stylesheet" href="./style/homescreen.css">
     <style>
-       
+      
+
+       td.Polaris-IndexTable__TableCell.align_end a {
+    text-decoration: none;
+}
+
         .edit-student-container .Polaris-LegacyCard__Section {
             padding: 16px;
             background: #FFFFFF;
@@ -73,12 +78,9 @@
             margin-top: 20px;
         }
 
-        .edit-student-container {
-            max-width: 61.9vw;
-            margin: 0px auto;
-            margin-top: 60px;
-
-
+        .tabs_item_container .Polaris-IndexTable__ScrollBar {
+             
+            scrollbar-width: none;
         }
 
         .tabs_item_container {
@@ -95,6 +97,20 @@
             display: none;
         }
 
+        .Polaris-IndexTable__footerWrapper.footerWrapper_student_profile_table {
+                display: inline-block;
+                padding: 20px;
+                width: 100%;
+                
+            }
+            .edit-student-container .Polaris-Box.tabs_container .Polaris-Tabs__Wrapper {
+            padding-top: 25px;
+        }
+
+
+            .tabs_item_container .Polaris-IndexTable .Polaris-IndexTable__TableCell {
+                padding: 14px;
+            }
 
         @media screen and (max-width:750px) {
            
@@ -106,9 +122,7 @@
                 padding-bottom: 40px;
             }
 
-            .edit-student-container {
-                max-width: 90vw;
-            }
+            
 
             .edit-student-container input {
                 font-size: 0.8rem;
@@ -386,7 +400,7 @@
                     </div>
                 </div>
                 <div>
-                    <div class="edit-student-container">
+                    <div class="edit-student-container info_container">
                         <div class="Polaris-Box tabs_container"
                             style="--pc-box-padding-block-start-md:var(--p-space-200);--pc-box-padding-block-end-md:var(--p-space-200);--pc-box-padding-inline-start-md:var(--p-space-200);--pc-box-padding-inline-end-md:var(--p-space-200)">
                             <div class="Polaris-Tabs Polaris-Tabs__TabsMeasurer">
@@ -444,7 +458,7 @@
                                         <li class="Polaris-Tabs__TabContainer" role="presentation">
                                             <button id="all-customers-1" class="Polaris-Tabs__Tab "
                                                 aria-label="All customers" role="tab" type="button"
-                                                aria-controls="all-customers-content-1" tabindex="0"
+                                                aria-controls="student_profile-content-1" tabindex="0"
                                                 aria-selected="true">
                                                 <div class="Polaris-InlineStack"
                                                     style="--pc-inline-stack-align: center; --pc-inline-stack-block-align: center; --pc-inline-stack-wrap: nowrap; --pc-inline-stack-gap-xs: var(--p-space-200); --pc-inline-stack-flex-direction-xs: row;">
@@ -456,7 +470,7 @@
                                         <li class="Polaris-Tabs__TabContainer Polaris-Tabs__Tab--active"
                                             role="presentation">
                                             <button id="accepts-marketing-1" class="Polaris-Tabs__Tab" role="tab"
-                                                type="button" aria-controls="accepts-marketing-content-1" tabindex="-1"
+                                                type="button" aria-controls="accepts-payemnt-plan-content-1" tabindex="-1"
                                                 aria-selected="false">
                                                 <div class="Polaris-InlineStack"
                                                     style="--pc-inline-stack-align: center; --pc-inline-stack-block-align: center; --pc-inline-stack-wrap: nowrap; --pc-inline-stack-gap-xs: var(--p-space-200); --pc-inline-stack-flex-direction-xs: row;">
@@ -504,8 +518,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="Polaris-Tabs__Outer tabs_item_container">
-                            <div class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden" id="all-customers-content-1"
+                        <div class="Polaris-Tabs__Outer tabs_item_container ">
+                            <div class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden" id="student_profile-content-1"
                                 role="tabpanel" aria-labelledby="all-customers-1" tabindex="-1">
                                 <div class="Polaris-LegacyCard__Section">
                                     <div class="Polaris-BlockStack"
@@ -673,14 +687,7 @@
                                     </div>
                                 </div>
                                 <div class="Polaris-ButtonGroup">
-                                    <div class="Polaris-ButtonGroup__Item">
-                                        <button
-                                            class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
-                                            type="button">
-                                            <span
-                                                class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
-                                        </button>
-                                    </div>
+                                   
                                     <div class="Polaris-ButtonGroup__Item">
                                         <button
                                             class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
@@ -689,9 +696,17 @@
                                                 class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Save</span>
                                         </button>
                                     </div>
+                                    <div class="Polaris-ButtonGroup__Item">
+                                        <button
+                                            class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                                            type="button">
+                                            <span
+                                                class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="Polaris-Tabs__Panel " id="accepts-marketing-content-1" role="tabpanel"
+                            <div class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden " id="accepts-payemnt-plan-content-1" role="tabpanel"
                                 aria-labelledby="accepts-marketing-1" tabindex="-1">
                                 <div class="Polaris-ShadowBevel"
                                     style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
@@ -904,14 +919,253 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden" id="repeat-customers-content-1"
+                            <div class="Polaris-Tabs__Panel " id="repeat-customers-content-1"
                                 role="tabpanel" aria-labelledby="repeat-customers-1" tabindex="-1">
+                                <div class="Polaris-LegacyCard">
+                                    <div class="Polaris-IndexFilters__IndexFiltersWrapper" style="height: 44.8px;">
+                                      <div>
+                                      </div>
+                                      <div class="Polaris-IndexFilters">
+                                        <div>
+                                          <div class="Polaris-IndexFilters-Container">
+                                            <div class="Polaris-InlineStack" style="--pc-inline-stack-align:start;--pc-inline-stack-block-align:center;--pc-inline-stack-wrap:nowrap;--pc-inline-stack-gap-xs:var(--p-space-0);--pc-inline-stack-gap-md:var(--p-space-200);--pc-inline-stack-flex-direction-xs:row">
+                                              <div class="Polaris-IndexFilters__TabsWrapper">
+                                                <div style="transition:opacity 150ms var(--p-motion-ease);opacity:1">
+                                                  <div class="Polaris-Tabs__Outer">
+                                                    <div class="Polaris-Box" style="--pc-box-padding-block-start-md:var(--p-space-200);--pc-box-padding-block-end-md:var(--p-space-200);--pc-box-padding-inline-start-md:var(--p-space-200);--pc-box-padding-inline-end-md:var(--p-space-200)">
+                                                     
+                                                      <div class="Polaris-Tabs__Wrapper Polaris-Tabs__WrapperWithNewButton full_width_wrapper">
+                                                        
+                                                        <div class="Polaris-Connected full_width_wrapper"><div class="Polaris-Connected__Item Polaris-Connected__Item--primary"><div class="Polaris-TextField Polaris-TextField--borderless Polaris-TextField--slim"><div class="Polaris-TextField__Prefix Polaris-TextField__PrefixIcon" id=":r4r:-Prefix"><span class="Polaris-Text--root Polaris-Text--bodyMd"><span class="Polaris-Icon"><svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M12.323 13.383a5.5 5.5 0 1 1 1.06-1.06l2.897 2.897a.75.75 0 1 1-1.06 1.06l-2.897-2.897Zm.677-4.383a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"></path></svg></span></span></div><input id=":r4r:" placeholder="Find parent by email..." autocomplete="off" class="Polaris-TextField__Input Polaris-TextField__Input--hasClearButton" type="text" aria-labelledby=":r4r:Label :r4r:-Prefix" aria-invalid="false" data-1p-ignore="true" data-lpignore="true" data-form-type="other" value=""><div class="Polaris-TextField__Backdrop"></div></div></div></div>
+                                                      </div>
+                                                    </div>
+                                                    
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="Polaris-IndexFilters__ActionWrap">
+                                                <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantTertiary Polaris-Button--sizeMicro Polaris-Button--textAlignCenter" type="button"><span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span></button>
+                                                
+                                                <div>
+                                                  <span class="">
+                                                    <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeSlim Polaris-Button--textAlignCenter Polaris-Button--iconOnly" aria-label="Sort the results" type="button" tabindex="0" aria-describedby=":R3t6cq6:" data-polaris-tooltip-activator="true" aria-controls=":Rt6cq6:" aria-owns=":Rt6cq6:" aria-expanded="false" data-state="closed">
+                                                      <span class="Polaris-Button__Icon">
+                                                        <span class="Polaris-Icon">
+                                                          <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                            <path d="M7.75 6.06v7.69a.75.75 0 0 1-1.5 0v-7.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l3-3a.75.75 0 0 1 1.06 0l3 3a.75.75 0 1 1-1.06 1.06l-1.72-1.72Z">
+                                                            </path>
+                                                            <path d="M13.75 6.25a.75.75 0 0 0-1.5 0v7.69l-1.72-1.72a.75.75 0 1 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72v-7.69Z">
+                                                            </path>
+                                                          </svg>
+                                                        </span>
+                                                      </span>
+                                                    </button>
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="Polaris-IndexTable">
+                                      <div class="Polaris-IndexTable__IndexTableWrapper">
+                                        <div class="Polaris-IndexTable__LoadingPanel">
+                                          <div class="Polaris-IndexTable__LoadingPanelRow">
+                                            <span class="Polaris-Spinner Polaris-Spinner--sizeSmall">
+                                              <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.229 1.173a9.25 9.25 0 1011.655 11.412 1.25 1.25 0 10-2.4-.698 6.75 6.75 0 11-8.506-8.329 1.25 1.25 0 10-.75-2.385z">
+                                                </path>
+                                              </svg>
+                                            </span>
+                                            <span role="status">
+                                              <span class="Polaris-Text--root Polaris-Text--visuallyHidden">
+                                              </span>
+                                            </span>
+                                            <span class="Polaris-IndexTable__LoadingPanelText">Loading orders…</span>
+                                          </div>
+                                        </div>
+                                        <div class="Polaris-IndexTable__StickyTable" role="presentation">
+                                          <div>
+                                            <div>
+                                            </div>
+                                            <div>
+                                              <div class="Polaris-IndexTable__StickyTableHeader">
+                                                <div class="Polaris-IndexTable__LoadingPanel">
+                                                  <div class="Polaris-IndexTable__LoadingPanelRow">
+                                                    <span class="Polaris-Spinner Polaris-Spinner--sizeSmall">
+                                                      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M7.229 1.173a9.25 9.25 0 1011.655 11.412 1.25 1.25 0 10-2.4-.698 6.75 6.75 0 11-8.506-8.329 1.25 1.25 0 10-.75-2.385z">
+                                                        </path>
+                                                      </svg>
+                                                    </span>
+                                                    <span role="status">
+                                                      <span class="Polaris-Text--root Polaris-Text--visuallyHidden">
+                                                      </span>
+                                                    </span>
+                                                    <span class="Polaris-IndexTable__LoadingPanelText">Loading orders…</span>
+                                                  </div>
+                                                </div>
+                                                <div class="Polaris-IndexTable__StickyTableHeadings">
+                                                  <div class="Polaris-IndexTable__TableHeading Polaris-IndexTable__TableHeading--first" data-index-table-sticky-heading="true" style="min-width: 38px;">
+                                                    <div class="Polaris-IndexTable__ColumnHeaderCheckboxWrapper">
+                                                      <label class="Polaris-Choice Polaris-Choice--labelHidden Polaris-Checkbox__ChoiceLabel" for=":R2cqakq6:">
+                                                        <span class="Polaris-Choice__Control">
+                                                          <span class="Polaris-Checkbox">
+                                                            <input id=":R2cqakq6:" type="checkbox" class="Polaris-Checkbox__Input" aria-invalid="false" role="checkbox" aria-checked="false" value="">
+                                                            <span class="Polaris-Checkbox__Backdrop">
+                                                            </span>
+                                                            <span class="Polaris-Checkbox__Icon Polaris-Checkbox--animated">
+                                                              <svg viewBox="0 0 16 16" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                                                                <path class="" d="M1.5,5.5L3.44655,8.22517C3.72862,8.62007,4.30578,8.64717,4.62362,8.28044L10.5,1.5" transform="translate(2 2.980376)" opacity="0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" pathLength="1">
+                                                                </path>
+                                                              </svg>
+                                                            </span>
+                                                          </span>
+                                                        </span>
+                                                        <span class="Polaris-Choice__Label">
+                                                          <span class="Polaris-Text--root Polaris-Text--bodyMd">Select all orders</span>
+                                                        </span>
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="Polaris-IndexTable__TableHeading Polaris-IndexTable__TableHeading--second" data-index-table-sticky-heading="true" style="left: 38px; min-width: 70px;">
+                                                    <div style="--pc-index-table-heading-extra-padding-right:0" class="">
+                                                      <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Order</span>
+                                                    </div>
+                                                  </div>
+                                                  <div class="Polaris-IndexTable__TableHeading" data-index-table-sticky-heading="true" style="min-width: 159px;">
+                                                    <div style="--pc-index-table-heading-extra-padding-right:0" class="">
+                                                      <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Date</span>
+                                                    </div>
+                                                  </div>
+                                                  <div class="Polaris-IndexTable__TableHeading" data-index-table-sticky-heading="true" style="min-width: 161px;">
+                                                    <div style="--pc-index-table-heading-extra-padding-right:0" class="">
+                                                      <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Customer</span>
+                                                    </div>
+                                                  </div>
+                                                  <div class="Polaris-IndexTable__TableHeading Polaris-IndexTable--tableHeadingAlignEnd" data-index-table-sticky-heading="true" style="min-width: 89px;">
+                                                    <div style="--pc-index-table-heading-extra-padding-right:0" class="">
+                                                      <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Total</span>
+                                                    </div>
+                                                  </div>
+                                                  <div class="Polaris-IndexTable__TableHeading" data-index-table-sticky-heading="true" style="min-width: 154px;">
+                                                    <div style="--pc-index-table-heading-extra-padding-right:0" class="">
+                                                      <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Payment status</span>
+                                                    </div>
+                                                  </div>
+                                                  <div class="Polaris-IndexTable__TableHeading Polaris-IndexTable__TableHeading--last" data-index-table-sticky-heading="true" style="min-width: 158px;">
+                                                    <div style="--pc-index-table-heading-extra-padding-right:0" class="">
+                                                      <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Fulfillment status</span>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="Polaris-IndexTable__BulkActionsWrapper">
+                                                <div>
+                                                  <div class="Polaris-InlineStack" style="--pc-inline-stack-block-align:center;--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-400);--pc-inline-stack-flex-direction-xs:row">
+                                                    <div class="Polaris-BulkActions__BulkActionsSelectAllWrapper">
+                                                      <div class="Polaris-CheckableButton">
+                                                        <div class="Polaris-CheckableButton__Checkbox">
+                                                          <label class="Polaris-Choice Polaris-Choice--labelHidden Polaris-Checkbox__ChoiceLabel" for=":R1baakq6:">
+                                                            <span class="Polaris-Choice__Control">
+                                                              <span class="Polaris-Checkbox">
+                                                                <input id=":R1baakq6:" type="checkbox" class="Polaris-Checkbox__Input" aria-invalid="false" role="checkbox" aria-checked="false" value="">
+                                                                <span class="Polaris-Checkbox__Backdrop">
+                                                                </span>
+                                                                <span class="Polaris-Checkbox__Icon Polaris-Checkbox--animated">
+                                                                  <svg viewBox="0 0 16 16" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                                                                    <path class="" d="M1.5,5.5L3.44655,8.22517C3.72862,8.62007,4.30578,8.64717,4.62362,8.28044L10.5,1.5" transform="translate(2 2.980376)" opacity="0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" pathLength="1">
+                                                                    </path>
+                                                                  </svg>
+                                                                </span>
+                                                              </span>
+                                                            </span>
+                                                            <span class="Polaris-Choice__Label">
+                                                              <span class="Polaris-Text--root Polaris-Text--bodyMd">Select all 3 orders</span>
+                                                            </span>
+                                                          </label>
+                                                        </div>
+                                                        <span class="Polaris-CheckableButton__Label">
+                                                          <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">0 selected</span>
+                                                        </span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="Polaris-IndexTable-ScrollContainer">
+                                          <table class="Polaris-IndexTable__Table Polaris-IndexTable__Table--sticky">
+                                            
+                                            <tbody>
+                                              <tr id="1020" class="Polaris-IndexTable__TableRow">
+                                                
+                                                
+                                                <td class="Polaris-IndexTable__TableCell Polaris-Text--bold">Jaydon Stanton</td>
+                                                
+                                                
+                                                
+                                                
+                                                <td class="Polaris-IndexTable__TableCell align_end"><a class="Polaris-Link" href="https://help.shopify.com/manual" data-polaris-unstyled="true">Remove</a></td>
+                                                     
+                                              </tr>
+                                              <tr id="1019" class="Polaris-IndexTable__TableRow">
+                                              
+                                                <td class="Polaris-IndexTable__TableCell Polaris-Text--bold">Ruben Westerfelt</td>
+                                                
+                                                <td class="Polaris-IndexTable__TableCell align_end"><a class="Polaris-Link" href="https://help.shopify.com/manual" data-polaris-unstyled="true">Remove</a></td>
+                                                     
+                                              </tr>
+                                              <tr id="1018" class="Polaris-IndexTable__TableRow">
+                                           
+                                                <td class="Polaris-IndexTable__TableCell Polaris-Text--bold">Leo Carder</td>
+                                                  <td class="Polaris-IndexTable__TableCell align_end"><a class="Polaris-Link" href="https://help.shopify.com/manual" data-polaris-unstyled="true">Remove</a></td>
+                                                     
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <div class="Polaris-IndexTable__ScrollBarContainer Polaris-IndexTable--scrollBarContainerHidden">
+                                          <div class="Polaris-IndexTable__ScrollBar" style="--pc-index-table-scroll-bar-content-width: 814px;">
+                                            <div class="Polaris-IndexTable__ScrollBarContent">
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="Polaris-IndexTable__footerWrapper Polaris-IndexTable__TableRow  footerWrapper_student_profile_table"> 
+
+                                            <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                                                <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Add Parent</span>
+                                              </button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                  </div>
                             </div>
                             <div class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden" id="prospects-content-1"
                                 role="tabpanel" aria-labelledby="prospects-1" tabindex="-1">
                             </div>
+
+                            <div class="Polaris-ButtonGroup">
+                                <div class="Polaris-ButtonGroup__Item">
+                                  <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                                    <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
+                                  </button>
+                                </div>
+                                <div class="Polaris-ButtonGroup__Item">
+                                  <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                                    <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Save</span>
+                                  </button>
+                                </div>
+                              </div>
+
                         </div>
 
+                        
                     </div>
                 </div>
                 <div class="right_footer_section">
