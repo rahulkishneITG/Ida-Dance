@@ -455,8 +455,8 @@
                             <div class="Polaris-Tabs__Wrapper">
                                 <div class="Polaris-Tabs__ButtonWrapper">
                                     <ul class="Polaris-Tabs Polaris-Tabs_conatainer" data-tabs-focus-catchment="true" role="tablist">
-                                        <li class="Polaris-Tabs__TabContainer" role="presentation">
-                                            <button id="student_profile-1" class="Polaris-Tabs__Tab "
+                                        <li class="Polaris-Tabs__TabContainer " role="presentation">
+                                            <button id="student_profile-1" class="Polaris-Tabs__Tab Polaris-Tabs__Tab--active"
                                                 aria-label="All customers" role="tab" type="button"
                                                 aria-controls="student_profile-content-1" tabindex="0"
                                                 aria-selected="true">
@@ -467,7 +467,7 @@
                                                 </div>
                                             </button>
                                         </li>
-                                        <li class="Polaris-Tabs__TabContainer Polaris-Tabs__Tab--active"
+                                        <li class="Polaris-Tabs__TabContainer "
                                             role="presentation">
                                             <button id="accepts-payemnt-plan-1" class="Polaris-Tabs__Tab" role="tab"
                                                 type="button" aria-controls="accepts-payemnt-plan-content-1" tabindex="-1"
@@ -1207,8 +1207,8 @@ let tabs_content_parent = document.querySelectorAll(".tabs_item_container .Polar
 tabs_btns.forEach((elem, i) => {
   elem.addEventListener('click', function() {
      
-    tabs_btns.forEach(btn => btn.classList.remove("active_tab_item"));
-    this.classList.add("active_tab_item");
+    tabs_btns.forEach(btn => btn.classList.remove("Polaris-Tabs__Tab--active"));
+    this.classList.add("Polaris-Tabs__Tab--active");
     tabs_content_parent.forEach(panel => panel.classList.add("Polaris-Tabs__Panel--hidden"));  
     tabs_content_parent[i].classList.remove("Polaris-Tabs__Panel--hidden");
   });
