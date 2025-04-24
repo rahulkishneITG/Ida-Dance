@@ -42,12 +42,12 @@
             z-index: 0;
         }
 
-        .accepts-marketing-content.first-box.Polaris-Box {
+        .accepts-payemnt-plan-content.first-box.Polaris-Box {
             margin-top: 24px;
             margin-bottom: 10px;
         }
 
-        .accepts-marketing-content.Polaris-Box {
+        .accepts-payemnt-plan-content.Polaris-Box {
             padding: 10px;
             display: flex;
             align-items: center;
@@ -55,14 +55,14 @@
             margin-bottom: 8px;
         }
 
-        .accepts-marketing-content .editicon {
+        .accepts-payemnt-plan-content .editicon {
             width: 20px;
             height: 20px;
             display: inline-block;
             cursor: pointer;
         }
 
-        .accepts-marketing-content .Polaris-Text--root {
+        .accepts-payemnt-plan-content .Polaris-Text--root {
             display: flex;
             align-items: center;
             gap: 5px;
@@ -405,7 +405,7 @@
                             style="--pc-box-padding-block-start-md:var(--p-space-200);--pc-box-padding-block-end-md:var(--p-space-200);--pc-box-padding-inline-start-md:var(--p-space-200);--pc-box-padding-inline-end-md:var(--p-space-200)">
                             <div class="Polaris-Tabs Polaris-Tabs__TabsMeasurer">
                                 <li class="Polaris-Tabs__TabContainer" role="presentation">
-                                    <button id="all-customers-1Measurer"
+                                    <button id="student_profile-1Measurer"
                                         class="Polaris-Tabs__Tab Polaris-Tabs__Tab--active" role="tab" type="button"
                                         tabindex="-1" aria-selected="true">
                                         <div class="Polaris-InlineStack"
@@ -416,7 +416,7 @@
                                     </button>
                                 </li>
                                 <li class="Polaris-Tabs__TabContainer" role="presentation">
-                                    <button id="accepts-marketing-1Measurer" class="Polaris-Tabs__Tab" role="tab"
+                                    <button id="accepts-payemnt-plan-1Measurer" class="Polaris-Tabs__Tab" role="tab"
                                         type="button" tabindex="-1" aria-selected="false">
                                         <div class="Polaris-InlineStack"
                                             style="--pc-inline-stack-align:center;--pc-inline-stack-block-align:center;--pc-inline-stack-wrap:nowrap;--pc-inline-stack-gap-xs:var(--p-space-200);--pc-inline-stack-flex-direction-xs:row">
@@ -427,7 +427,7 @@
                                     </button>
                                 </li>
                                 <li class="Polaris-Tabs__TabContainer" role="presentation">
-                                    <button id="repeat-customers-1Measurer" class="Polaris-Tabs__Tab" role="tab"
+                                    <button id="parents-1Measurer" class="Polaris-Tabs__Tab" role="tab"
                                         type="button" tabindex="-1" aria-selected="false">
                                         <div class="Polaris-InlineStack"
                                             style="--pc-inline-stack-align:center;--pc-inline-stack-block-align:center;--pc-inline-stack-wrap:nowrap;--pc-inline-stack-gap-xs:var(--p-space-200);--pc-inline-stack-flex-direction-xs:row">
@@ -454,9 +454,9 @@
                             </div>
                             <div class="Polaris-Tabs__Wrapper">
                                 <div class="Polaris-Tabs__ButtonWrapper">
-                                    <ul class="Polaris-Tabs" data-tabs-focus-catchment="true" role="tablist">
+                                    <ul class="Polaris-Tabs Polaris-Tabs_conatainer" data-tabs-focus-catchment="true" role="tablist">
                                         <li class="Polaris-Tabs__TabContainer" role="presentation">
-                                            <button id="all-customers-1" class="Polaris-Tabs__Tab "
+                                            <button id="student_profile-1" class="Polaris-Tabs__Tab "
                                                 aria-label="All customers" role="tab" type="button"
                                                 aria-controls="student_profile-content-1" tabindex="0"
                                                 aria-selected="true">
@@ -469,7 +469,7 @@
                                         </li>
                                         <li class="Polaris-Tabs__TabContainer Polaris-Tabs__Tab--active"
                                             role="presentation">
-                                            <button id="accepts-marketing-1" class="Polaris-Tabs__Tab" role="tab"
+                                            <button id="accepts-payemnt-plan-1" class="Polaris-Tabs__Tab" role="tab"
                                                 type="button" aria-controls="accepts-payemnt-plan-content-1" tabindex="-1"
                                                 aria-selected="false">
                                                 <div class="Polaris-InlineStack"
@@ -481,8 +481,8 @@
                                             </button>
                                         </li>
                                         <li class="Polaris-Tabs__TabContainer" role="presentation">
-                                            <button id="repeat-customers-1" class="Polaris-Tabs__Tab" role="tab"
-                                                type="button" aria-controls="repeat-customers-content-1" tabindex="-1"
+                                            <button id="parents-1" class="Polaris-Tabs__Tab" role="tab"
+                                                type="button" aria-controls="parents-content-1" tabindex="-1"
                                                 aria-selected="false">
                                                 <div class="Polaris-InlineStack"
                                                     style="--pc-inline-stack-align: center; --pc-inline-stack-block-align: center; --pc-inline-stack-wrap: nowrap; --pc-inline-stack-gap-xs: var(--p-space-200); --pc-inline-stack-flex-direction-xs: row;">
@@ -519,8 +519,8 @@
                             </div>
                         </div>
                         <div class="Polaris-Tabs__Outer tabs_item_container ">
-                            <div class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden" id="student_profile-content-1"
-                                role="tabpanel" aria-labelledby="all-customers-1" tabindex="-1">
+                            <div class="Polaris-Tabs__Panel active_tab_item " id="student_profile-content-1"
+                                role="tabpanel" aria-labelledby="student_profile-1" tabindex="-1">
                                 <div class="Polaris-LegacyCard__Section">
                                     <div class="Polaris-BlockStack"
                                         style="--pc-block-stack-order:column;--pc-block-stack-gap-xs:var(--p-space-400)">
@@ -707,7 +707,7 @@
                                 </div>
                             </div>
                             <div class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden " id="accepts-payemnt-plan-content-1" role="tabpanel"
-                                aria-labelledby="accepts-marketing-1" tabindex="-1">
+                                aria-labelledby="accepts-payemnt-plan-1" tabindex="-1">
                                 <div class="Polaris-ShadowBevel"
                                     style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
                                     <div class="Polaris-Box"
@@ -715,7 +715,7 @@
                                         <h2 class="Polaris-Text--root Polaris-Text--bold">Drag & Drop Installments</h2>
                                         <div class="Polaris-ShadowBevel"
                                             style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
-                                            <div class="accepts-marketing-content first-box Polaris-Box"
+                                            <div class="accepts-payemnt-plan-content first-box Polaris-Box"
                                                 style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
                                                 <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Sep 1, 2024</h2>
                                                 <p class="Polaris-Text--root Polaris-Text--bodyLg">$100 <span
@@ -828,7 +828,7 @@
                                         </div>
                                         <div class="Polaris-ShadowBevel"
                                             style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
-                                            <div class="accepts-marketing-content Polaris-Box"
+                                            <div class="accepts-payemnt-plan-content Polaris-Box"
                                                 style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
                                                 <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Dec 1, 2024</h2>
                                                 <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
@@ -842,7 +842,7 @@
                                         </div>
                                         <div class="Polaris-ShadowBevel"
                                             style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
-                                            <div class="accepts-marketing-content Polaris-Box"
+                                            <div class="accepts-payemnt-plan-content Polaris-Box"
                                                 style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
                                                 <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Mar 1, 2025</h2>
                                                 <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
@@ -876,7 +876,7 @@
 
                                         <div class="Polaris-ShadowBevel"
                                             style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
-                                            <div class="accepts-marketing-content Polaris-Box"
+                                            <div class="accepts-payemnt-plan-content Polaris-Box"
                                                 style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
                                                 <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Dec 1, 2024</h2>
                                                 <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
@@ -890,7 +890,7 @@
                                         </div>
                                         <div class="Polaris-ShadowBevel"
                                             style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
-                                            <div class="accepts-marketing-content Polaris-Box"
+                                            <div class="accepts-payemnt-plan-content Polaris-Box"
                                                 style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
                                                 <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Mar 1, 2025</h2>
                                                 <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
@@ -904,7 +904,7 @@
                                         </div>
                                         <div class="Polaris-ShadowBevel"
                                             style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
-                                            <div class="accepts-marketing-content Polaris-Box"
+                                            <div class="accepts-payemnt-plan-content Polaris-Box"
                                                 style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
                                                 <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Mar 1, 2025</h2>
                                                 <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
@@ -918,9 +918,22 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="Polaris-ButtonGroup">
+                                    <div class="Polaris-ButtonGroup__Item">
+                                      <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                                        <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
+                                      </button>
+                                    </div>
+                                    <div class="Polaris-ButtonGroup__Item">
+                                      <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                                        <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Save</span>
+                                      </button>
+                                    </div>
+                                  </div>
+                           
                             </div>
-                            <div class="Polaris-Tabs__Panel " id="repeat-customers-content-1"
-                                role="tabpanel" aria-labelledby="repeat-customers-1" tabindex="-1">
+                            <div class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden" id="parents-content-1"
+                                role="tabpanel" aria-labelledby="parents-1" tabindex="-1">
                                 <div class="Polaris-LegacyCard">
                                     <div class="Polaris-IndexFilters__IndexFiltersWrapper" style="height: 44.8px;">
                                       <div>
@@ -1145,23 +1158,24 @@
                                     </div>
                                     </div>
                                   </div>
-                            </div>
-                            <div class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden" id="prospects-content-1"
-                                role="tabpanel" aria-labelledby="prospects-1" tabindex="-1">
-                            </div>
+                            
+                                  <div class="Polaris-ButtonGroup">
+                                    <div class="Polaris-ButtonGroup__Item">
+                                      <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                                        <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
+                                      </button>
+                                    </div>
+                                    <div class="Polaris-ButtonGroup__Item">
+                                      <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                                        <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Save</span>
+                                      </button>
+                                    </div>
+                                  </div>
 
-                            <div class="Polaris-ButtonGroup">
-                                <div class="Polaris-ButtonGroup__Item">
-                                  <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
-                                    <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
-                                  </button>
                                 </div>
-                                <div class="Polaris-ButtonGroup__Item">
-                                  <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
-                                    <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Save</span>
-                                  </button>
-                                </div>
-                              </div>
+                           
+
+                          
 
                         </div>
 
@@ -1186,6 +1200,20 @@
         });
 
         if (window.innerWidth <= 786) document.querySelector(".sidebar_container").classList.add("collapsed");
+
+        let tabs_btns = document.querySelectorAll(".Polaris-Tabs_conatainer button.Polaris-Tabs__Tab");
+let tabs_content_parent = document.querySelectorAll(".tabs_item_container .Polaris-Tabs__Panel");
+
+tabs_btns.forEach((elem, i) => {
+  elem.addEventListener('click', function() {
+     
+    tabs_btns.forEach(btn => btn.classList.remove("active_tab_item"));
+    this.classList.add("active_tab_item");
+    tabs_content_parent.forEach(panel => panel.classList.add("Polaris-Tabs__Panel--hidden"));  
+    tabs_content_parent[i].classList.remove("Polaris-Tabs__Panel--hidden");
+  });
+});
+   
     </script>
 
 </body>
