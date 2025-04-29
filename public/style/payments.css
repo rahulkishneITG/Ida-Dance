@@ -1,5 +1,7 @@
-.info_container.payments{
+.info_container.payments {
     padding-top: 24px;
+    display: flex;
+    gap: 24px;
 }
 .date-pickert-with-payments-info {
     max-width: 567px;
@@ -76,6 +78,28 @@ button.Polaris-DatePicker__Day.Polaris-DatePicker__Day--next-selected:before
     background: #EBEBEB;
     color: #303030;
 }
+.payment-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Polaris-LegacyStack__Item.detailed-container-item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-block: 8px;
+}
+body * {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+}
+.payment-info-container {
+    max-width: 359px;
+    width: 359px;
+}
 @media screen and (max-width: 600px) {
     .date-picker-with-info {
         flex-direction: column;
@@ -91,4 +115,53 @@ button.Polaris-DatePicker__Day.Polaris-DatePicker__Day--next-selected:before
         max-height: 100%;
         height: 100%;
     }
+}
+.payment-info-container {
+    display: none;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+}
+
+.payment-info-container.active {
+    display: block;
+    transform: translateX(0); 
+}
+
+
+.payment-info-header .close-btn {
+    cursor: pointer;
+}
+
+.mark-paid-modal-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    display: none;
+}
+body:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    background: #00000045;
+    display: none;
+}
+.mark-paid-modal-container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.mark-paid-modal-container-detailed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
 }

@@ -129,10 +129,12 @@
             visibility: hidden;
             opacity: 0;
         }
-        .add-installment-modal.modal-active{
+
+        .add-installment-modal.modal-active {
             visibility: visible;
             opacity: 1;
         }
+
         body:before {
             position: absolute;
             content: "";
@@ -143,16 +145,40 @@
             visibility: hidden;
             opacity: 0;
         }
+
         body.modal-active:before {
             visibility: visible;
-            opacity: 1;  
+            opacity: 1;
         }
+
         .start-and-end-date-container {
             display: flex;
             flex-direction: column;
             gap: 16px;
         }
 
+        .toggle-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .collapsible-container {
+            display: none; 
+            transition: all 0.3s ease; 
+        }
+
+        .collapsible-container.active {
+            display: block; 
+        }
+
+        .toggle-container .Polaris-Button {
+            transition: background-color 0.2s ease;
+        }
+
+        .toggle-container .Polaris-Button:hover {
+            background-color: var(--p-color-bg-surface-hover);
+        }
         @media screen and (max-width:750px) {
 
             .Polaris-Tabs__Outer {
@@ -163,10 +189,20 @@
                 padding-bottom: 40px;
             }
 
-
+            .add-installment-modal {
+                max-width: 50%;
+                max-height: 50%;
+            }
 
             .edit-student-container input {
                 font-size: 0.8rem;
+            }
+        }
+
+        @media screen and (max-width:479px) {
+            .add-installment-modal {
+                max-width: 70%;
+                max-height: 50%;
             }
         }
     </style>
@@ -754,7 +790,7 @@
                                     style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
                                     <div class="Polaris-Box"
                                         style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
-                                        <h2 class="Polaris-Text--root Polaris-Text--bold" >Drag & Drop Installments</h2>
+                                        <h2 class="Polaris-Text--root Polaris-Text--bold">Drag & Drop Installments</h2>
                                         <div class="Polaris-ShadowBevel"
                                             style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
                                             <div class="accepts-payemnt-plan-content first-box Polaris-Box"
@@ -1112,48 +1148,59 @@
                                     style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
                                     <div class="Polaris-Box"
                                         style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
-                                        <h2 class="Polaris-Text--root Polaris-Text--bold" style="margin-bottom: 10px;">Drag & Drop Installments</h2>
-
-                                        <div class="Polaris-ShadowBevel"
-                                            style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
-                                            <div class="accepts-payemnt-plan-content Polaris-Box"
-                                                style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
-                                                <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Dec 1, 2024</h2>
-                                                <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
-                                                        class="editicon"><svg xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 20 20">
-                                                            <path fill-rule="evenodd"
-                                                                d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z" />
-                                                        </svg></span></p>
-
-                                            </div>
+                                        <div class="toggle-container">
+                                            <h2 class="Polaris-Text--root Polaris-Text--bold"
+                                                style="margin-bottom: 10px;">Drag & Drop Installments</h2>
+                                            <button
+                                                class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                                                type="button">
+                                                <span
+                                                    class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Toggle</span>
+                                            </button>
                                         </div>
-                                        <div class="Polaris-ShadowBevel"
-                                            style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
-                                            <div class="accepts-payemnt-plan-content Polaris-Box"
-                                                style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
-                                                <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Mar 1, 2025</h2>
-                                                <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
-                                                        class="editicon"><svg xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 20 20">
-                                                            <path fill-rule="evenodd"
-                                                                d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z" />
-                                                        </svg></span></p>
 
+                                        <div class="collapsible-container">
+                                            <div class="Polaris-ShadowBevel"
+                                                style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
+                                                <div class="accepts-payemnt-plan-content Polaris-Box"
+                                                    style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
+                                                    <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Dec 1, 2024</h2>
+                                                    <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
+                                                            class="editicon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path fill-rule="evenodd"
+                                                                    d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z" />
+                                                            </svg></span></p>
+
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="Polaris-ShadowBevel"
-                                            style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
-                                            <div class="accepts-payemnt-plan-content Polaris-Box"
-                                                style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
-                                                <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Mar 1, 2025</h2>
-                                                <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
-                                                        class="editicon"><svg xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 20 20">
-                                                            <path fill-rule="evenodd"
-                                                                d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z" />
-                                                        </svg></span></p>
+                                            <div class="Polaris-ShadowBevel"
+                                                style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
+                                                <div class="accepts-payemnt-plan-content Polaris-Box"
+                                                    style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
+                                                    <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Mar 1, 2025</h2>
+                                                    <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
+                                                            class="editicon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path fill-rule="evenodd"
+                                                                    d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z" />
+                                                            </svg></span></p>
 
+                                                </div>
+                                            </div>
+                                            <div class="Polaris-ShadowBevel"
+                                                style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
+                                                <div class="accepts-payemnt-plan-content Polaris-Box"
+                                                    style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
+                                                    <h2 class="Polaris-Text--root Polaris-Text--bodyMd">Mar 1, 2025</h2>
+                                                    <p class="Polaris-Text--root Polaris-Text--bodyLg">$500 <span
+                                                            class="editicon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path fill-rule="evenodd"
+                                                                    d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z" />
+                                                            </svg></span></p>
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1678,7 +1725,7 @@
                     <div class="edit-price-container">
                         <div class="Polaris-InlineStack"
                             style="--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-300);--pc-inline-stack-flex-direction-xs:row">
-                          
+
                             <div class="Polaris-FormLayout__Item Polaris-FormLayout--grouped">
                                 <div class="">
                                     <div class="Polaris-Labelled__LabelWrapper">
@@ -1723,17 +1770,23 @@
                     <div class="button-group-installment-modal">
                         <div class="Polaris-ButtonGroup">
                             <div class="Polaris-ButtonGroup__Item save-btn">
-                                <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
-                                  <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Save</span>
+                                <button
+                                    class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                                    type="button">
+                                    <span
+                                        class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Save</span>
                                 </button>
-                              </div>
-                            <div class="Polaris-ButtonGroup__Item cancel-btn">
-                              <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
-                                <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
-                              </button>
                             </div>
-                            
-                          </div>
+                            <div class="Polaris-ButtonGroup__Item cancel-btn">
+                                <button
+                                    class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                                    type="button">
+                                    <span
+                                        class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
+                                </button>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1784,6 +1837,16 @@
             const modal = document.querySelector('.add-installment-modal');
             if (modal) {
                 modal.classList.remove('modal-active');
+            }
+        });
+        document.querySelector('.toggle-container .Polaris-Button').addEventListener('click', () => {
+            const collapsibleContainer = document.querySelector('.collapsible-container');
+            if (collapsibleContainer) {
+                collapsibleContainer.classList.toggle('active');
+                const buttonText = document.querySelector('.toggle-container .Polaris-Button .Polaris-Text--root');
+                if (buttonText) {
+                    buttonText.textContent = collapsibleContainer.classList.contains('active') ? 'Collapse' : 'Toggle';
+                }
             }
         });
     </script>
