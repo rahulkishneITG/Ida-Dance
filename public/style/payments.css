@@ -1,0 +1,94 @@
+.info_container.payments{
+    padding-top: 24px;
+}
+.date-pickert-with-payments-info {
+    max-width: 567px;
+    width: 100%;
+}
+.date-picker-with-info {
+    display: flex;
+    gap: 16px;
+}
+.date-picker,.payments-info {
+    max-width: 250.52px;
+    width: 100%;
+}
+span.middle-border {
+    width: 1px;
+    height: 210px;
+    background: #CCCCCCB2;
+}
+.payments-text {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    max-height: 30px;
+    height: 100%;
+}
+span.overdue-dot {
+    width: 8px;
+    height: 8px;
+    background: #EF1717;
+    border-radius: 50%;
+}
+span.due-dot {
+    width: 8px;
+    height: 8px;
+    background: #EFDD17;
+    border-radius: 50%;
+}
+.payments-text.overdue-info-text {
+    margin-bottom: 8px;
+}
+button.Polaris-DatePicker__Day.Polaris-DatePicker__Day--selected {
+    background: #EBEBEB;
+    color: #303030;
+    padding: 7px 11px 7px 16px;
+    position: relative;
+}
+button.Polaris-DatePicker__Day.Polaris-DatePicker__Day--next-selected{
+    padding: 7px 7px 7px 14px;
+}
+button.Polaris-DatePicker__Day.Polaris-DatePicker__Day--selected:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: #EF1717;
+    border-radius: 50%;
+}
+button.Polaris-DatePicker__Day.Polaris-DatePicker__Day--next-selected:before
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: #EFDD17;
+    border-radius: 50%;
+}
+.date-picker .Polaris-DatePicker__Day:hover{
+    background: #EBEBEB;
+    color: #303030;
+}
+@media screen and (max-width: 600px) {
+    .date-picker-with-info {
+        flex-direction: column;
+    }
+    .date-picker,.payments-info {
+        max-width: 100%;
+    }
+    span.middle-border {
+        width: 100%;
+        height: 1px;
+    }
+    .payments-text {
+        max-height: 100%;
+        height: 100%;
+    }
+}

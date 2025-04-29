@@ -1,0 +1,85 @@
+.info_container.remidner-container {
+    max-width: 1152px;
+    margin-top: 24px;
+}
+.tab-container .Polaris-Box {
+    padding-inline: 0;
+    padding-bottom: 24px;
+}
+.tab-container .Polaris-Tabs__Wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main--content-container-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.search-bar {
+    max-width: 1020px;
+    width: 100%;
+}
+.search-bar {
+    max-width: 1020px;
+    width: 100%;
+}
+.table-main-upper-container {
+    display: flex;
+    align-items: center;
+    gap:4px;
+}
+.table-main-upper-container .clear-all {
+    margin-left: 8px;
+}
+.table-main-upper-container .action-tab .Polaris-Button {
+    border: 1px dashed #E3E3E3;
+}
+.action-tab{
+    position: relative;
+}
+.action-tab .Polaris-Popover__PopoverOverlay{
+    visibility: hidden;
+}
+.action-tab .Polaris-Popover__PopoverOverlay.Polaris-Popover__PopoverOverlay--open{
+    visibility: visible;
+}
+.homescreen_container.reminder_container .main-table-container .Polaris-LegacyCard,.homescreen_container.reminder_container .main-table-container .Polaris-LegacyCard::before {
+    border-radius: 0;
+    box-shadow: none;
+}
+.main-content-container-polaris-box {
+    padding-inline: 0;
+}
+.main--content-container-header,.table-main-upper-container ,.Polaris-Bleed.pagination{
+    padding-inline: 16px;
+}
+.table-main-upper-container{
+    padding-inline: 8px;
+}
+.Polaris-ButtonGroup--variantSegmented{
+    justify-content: center;
+}
+.main-table-container .Polaris-LegacyCard thead {
+    border: 1px solid #e3e3e3;
+}
+.main-table-container th.Polaris-IndexTable__TableHeading.Polaris-IndexTable__TableHeading--second {
+    width: 279.5px;
+    max-width: 279.5px;
+}
+.main-table-container th.Polaris-IndexTable__TableHeading.Polaris-IndexTable__TableHeading--second:first-child{
+    padding-left: 16px;
+}
+.info_container.remidner-container .main-table-container td.Polaris-IndexTable__TableCell.table-cell-id {
+    padding: 16px;
+}
+.reset-btn .Polaris-Button {
+    padding: 0;
+}
+@media screen and (max-width:786px){
+    .table-main-upper-container {
+        padding-inline: 8px;
+        display: flex;
+        justify-content: center;
+    }
+}
