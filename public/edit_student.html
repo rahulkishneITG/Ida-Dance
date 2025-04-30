@@ -179,6 +179,23 @@
         .toggle-container .Polaris-Button:hover {
             background-color: var(--p-color-bg-surface-hover);
         }
+        .add-parent-modal,.confirmation-modal-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30%;
+            height: 30%;
+            transform: translate(-50%, -50%);
+            z-index: 9;
+            display: none;
+        }
+        .add-parent-modal-active,.parent-remove-confirmation-active{
+            display: block;
+        }
+        body.add-parent-modal-active:before,body.parent-remove-confirmation-active:before{
+            visibility: visible;
+            opacity: 1;
+        }
         @media screen and (max-width:750px) {
 
             .Polaris-Tabs__Outer {
@@ -1561,7 +1578,7 @@
 
 
 
-                                                            <td class="Polaris-IndexTable__TableCell align_end"><a
+                                                            <td class="Polaris-IndexTable__TableCell align_end parent-remove-btn"><a
                                                                     class="Polaris-Link"
                                                                     href="https://help.shopify.com/manual"
                                                                     data-polaris-unstyled="true">Remove</a></td>
@@ -1573,7 +1590,7 @@
                                                                 class="Polaris-IndexTable__TableCell Polaris-Text--bold">
                                                                 Ruben Westerfelt</td>
 
-                                                            <td class="Polaris-IndexTable__TableCell align_end"><a
+                                                            <td class="Polaris-IndexTable__TableCell align_end parent-remove-btn"><a
                                                                     class="Polaris-Link"
                                                                     href="https://help.shopify.com/manual"
                                                                     data-polaris-unstyled="true">Remove</a></td>
@@ -1584,7 +1601,7 @@
                                                             <td
                                                                 class="Polaris-IndexTable__TableCell Polaris-Text--bold">
                                                                 Leo Carder</td>
-                                                            <td class="Polaris-IndexTable__TableCell align_end"><a
+                                                            <td class="Polaris-IndexTable__TableCell align_end parent-remove-btn"><a
                                                                     class="Polaris-Link"
                                                                     href="https://help.shopify.com/manual"
                                                                     data-polaris-unstyled="true">Remove</a></td>
@@ -1605,7 +1622,7 @@
                                                 class="Polaris-IndexTable__footerWrapper Polaris-IndexTable__TableRow  footerWrapper_student_profile_table">
 
                                                 <button
-                                                    class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                                                    class="add-parent-btn Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
                                                     type="button">
                                                     <span
                                                         class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Add
@@ -1616,24 +1633,7 @@
                                     </div>
                                 </div>
 
-                                <div class="Polaris-ButtonGroup">
-                                    <div class="Polaris-ButtonGroup__Item">
-                                        <button
-                                            class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
-                                            type="button">
-                                            <span
-                                                class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
-                                        </button>
-                                    </div>
-                                    <div class="Polaris-ButtonGroup__Item">
-                                        <button
-                                            class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
-                                            type="button">
-                                            <span
-                                                class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Save</span>
-                                        </button>
-                                    </div>
-                                </div>
+                                
 
                             </div>
 
@@ -1792,6 +1792,80 @@
             </div>
         </div>
     </div>
+    <div class="add-parent-modal">
+        <div class="Polaris-ShadowBevel" style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
+            <div class="Polaris-Box" style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
+              <div class="email-field">
+                <div class="">
+                    <div class="Polaris-Labelled__LabelWrapper">
+                      <div class="Polaris-Label">
+                        <label id=":Rq6:Label" for=":Rq6:" class="Polaris-Label__Text">
+                          <span class="Polaris-Text--root Polaris-Text--bodyMd">Email</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="Polaris-Connected">
+                      <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                        <div class="Polaris-TextField Polaris-TextField--hasValue">
+                          <input id=":Rq6:" autocomplete="email" class="Polaris-TextField__Input" type="email" aria-labelledby=":Rq6:Label" aria-invalid="false" value="bernadette.lapresse@jadedpixel.com">
+                          <div class="Polaris-TextField__Backdrop">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="button-group">
+                <div class="Polaris-ButtonGroup">
+                    <div class="Polaris-ButtonGroup__Item add-btn">
+                        <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                          <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Add</span>
+                        </button>
+                      </div>
+                    <div class="Polaris-ButtonGroup__Item parent-modal-cancel-btn">
+                      <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                        <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
+                      </button>
+                    </div>
+                    
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="confirmation-modal-container">
+        <div class="Polaris-ShadowBevel "
+            style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
+            <div class="Polaris-Box confirmation-block"
+                style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
+                <div class="Polaris-LegacyStack__Item header-container">
+                    <h6 class="Polaris-Text--root Polaris-Text--headingMd">Are You Sure you want to remove an parent ?
+                    </h6>
+                </div>
+                <div class="button-group">
+                    <div class="Polaris-ButtonGroup">
+                        <div class="Polaris-ButtonGroup__Item">
+                            <button
+                                class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                                type="button">
+                                <span
+                                    class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Remove</span>
+                            </button>
+                        </div>
+                        <div class="Polaris-ButtonGroup__Item confirmation-modal-cancel-button">
+                            <button
+                                class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                                type="button">
+                                <span
+                                    class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         document.querySelectorAll(".sidebar-toggler, .sidebar-menu-button").forEach((button) => {
             button.addEventListener("click", () => {
@@ -1847,6 +1921,36 @@
                 if (buttonText) {
                     buttonText.textContent = collapsibleContainer.classList.contains('active') ? 'Collapse' : 'Toggle';
                 }
+            }
+        });
+        document.querySelector('.add-parent-btn').addEventListener('click', () => {
+            document.body.classList.add('add-parent-modal-active');
+            const modal = document.querySelector('.add-parent-modal');
+            if (modal) {
+                modal.classList.add('add-parent-modal-active');
+            }
+        });
+
+        document.querySelector('.Polaris-ButtonGroup__Item.parent-modal-cancel-btn').addEventListener('click', () => {
+            document.body.classList.remove('add-parent-modal-active');
+            const modal = document.querySelector('.add-parent-modal');
+            if (modal) {
+                modal.classList.remove('add-parent-modal-active');
+            }
+        });
+        document.querySelector('.parent-remove-btn').addEventListener('click', () => {
+            document.body.classList.add('parent-remove-confirmation-active');
+            const modal = document.querySelector('.confirmation-modal-container');
+            if (modal) {
+                modal.classList.add('parent-remove-confirmation-active');
+            }
+        });
+
+        document.querySelector('.confirmation-modal-cancel-button').addEventListener('click', () => {
+            document.body.classList.remove('parent-remove-confirmation-active');
+            const modal = document.querySelector('.confirmation-modal-container');
+            if (modal) {
+                modal.classList.remove('parent-remove-confirmation-active');
             }
         });
     </script>
