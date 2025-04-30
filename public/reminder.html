@@ -301,8 +301,8 @@
                                                 </button>
                                             </li>
                                             <li class="Polaris-Tabs__TabContainer" role="presentation">
-                                                <button id="accepts-marketing-1" class="Polaris-Tabs__Tab" role="tab"
-                                                    type="button" aria-controls="accepts-marketing-content-1"
+                                                <button id="accepts-marketing-1" class="Polaris-Tabs__Tab history-tab"
+                                                    role="tab" type="button" aria-controls="accepts-marketing-content-1"
                                                     tabindex="-1" aria-selected="false">
                                                     <div class="Polaris-InlineStack"
                                                         style="--pc-inline-stack-align: center; --pc-inline-stack-block-align: center; --pc-inline-stack-wrap: nowrap; --pc-inline-stack-gap-xs: var(--p-space-200); --pc-inline-stack-flex-direction-xs: row;">
@@ -2355,129 +2355,7 @@
             </div>
         </div>
     </div>
-    <div class="send-remider-modal">
-        <div class="send-remider-info-container">
-            <div class="Polaris-ShadowBevel"
-                style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
-                <div class="Polaris-Box"
-                    style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
-                    <div class="send-remider-info-header">
-                        <h2 class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">Reminder Details</h2>
-                        <div class="close-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
-                                fill="none">
-                                <path
-                                    d="M17.8082 19.292C17.9043 19.3951 18.0203 19.4779 18.1491 19.5353C18.2779 19.5926 18.4169 19.6235 18.5579 19.626C18.6989 19.6285 18.8389 19.6025 18.9697 19.5497C19.1004 19.4969 19.2192 19.4183 19.3189 19.3186C19.4186 19.2189 19.4972 19.1001 19.55 18.9694C19.6028 18.8386 19.6287 18.6986 19.6262 18.5576C19.6238 18.4166 19.5929 18.2776 19.5355 18.1488C19.4781 18.02 19.3954 17.9041 19.2922 17.808L15.4842 14L19.2922 10.192C19.4777 9.99291 19.5787 9.72965 19.5739 9.45762C19.5691 9.1856 19.4589 8.92606 19.2665 8.73369C19.0741 8.54131 18.8146 8.43111 18.5425 8.42631C18.2705 8.42151 18.0073 8.52248 17.8082 8.70796L14.0002 12.516L10.1922 8.70796C9.99317 8.52248 9.7299 8.42151 9.45788 8.42631C9.18586 8.43111 8.92632 8.54131 8.73394 8.73369C8.54157 8.92606 8.43137 9.1856 8.42657 9.45762C8.42177 9.72965 8.52274 9.99291 8.70821 10.192L12.5162 14L8.70821 17.808C8.60505 17.9041 8.52231 18.02 8.46492 18.1488C8.40753 18.2776 8.37667 18.4166 8.37419 18.5576C8.3717 18.6986 8.39763 18.8386 8.45044 18.9694C8.50325 19.1001 8.58185 19.2189 8.68156 19.3186C8.78127 19.4183 8.90003 19.4969 9.03078 19.5497C9.16152 19.6025 9.30156 19.6285 9.44255 19.626C9.58353 19.6235 9.72257 19.5926 9.85137 19.5353C9.98017 19.4779 10.0961 19.3951 10.1922 19.292L14.0002 15.484L17.8082 19.292Z"
-                                    fill="#303030" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="detailed-container">
-                        <div class="Polaris-LegacyStack__Item detailed-container-item">
-                            <p class="Polaris-Text--root Polaris-Text--medium">Name:</p>
-                            <p class="Polaris-Text--root Polaris-Text--bodySm">Kevin</p>
-                        </div>
-                        <div class="Polaris-LegacyStack__Item detailed-container-item">
-                            <p class="Polaris-Text--root Polaris-Text--medium">Term: </p>
-                            <p class="Polaris-Text--root Polaris-Text--bodySm">Winter ($300)</p>
-                        </div>
-                        <div class="Polaris-LegacyStack__Item detailed-container-item">
-                            <p class="Polaris-Text--root Polaris-Text--medium">Scheduled:</p>
-                            <p class="Polaris-Text--root Polaris-Text--bodySm">Dec 1, 9:00 AM </p>
-                        </div>
-                        <div class="Polaris-LegacyStack__Item detailed-container-item">
-                            <p class="Polaris-Text--root Polaris-Text--medium">Method:</p>
-                            <p class="Polaris-Text--root Polaris-Text--bodySm"> Email</p>
-                        </div>
-                        <div class="Polaris-LegacyStack__Item  send-remider-detailed-container-item">
-                            <div class="">
-                                <div class="Polaris-Labelled__LabelWrapper">
-                                    <div class="Polaris-Label">
-                                        <label id=":Rq6:Label" for=":Rq6:" class="Polaris-Label__Text">
-                                            <span
-                                                class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold email-preview">Email
-                                                Preview</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="Polaris-Connected">
-                                    <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
-                                        <div class="Polaris-TextField Polaris-TextField--hasValue">
-                                           
-                                                <textarea id=":Rq6:" autocomplete="off" class="Polaris-TextField__Input"
-                                                type="textarea" aria-labelledby=":Rq6:Label" aria-invalid="false"
-                                                data-1p-ignore="true" data-lpignore="true" data-form-type="other"
-                                                value=""
-                                                placeholder="“ Hi Parent, winter payment of $300 is due by ..."></textarea>
-                                            <div class="Polaris-TextField__Backdrop">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="button-group-container">
-                        <div class="Polaris-ButtonGroup">
-                            <div class="Polaris-ButtonGroup__Item send-reminder-button">
-                                <button
-                                    class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
-                                    type="button">
-                                    <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Edit
-                                        Timing</span>
-                                </button>
-                            </div>
-                            <div class="Polaris-ButtonGroup__Item send-button">
-                                <button
-                                    class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
-                                    type="button">
-                                    <span
-                                        class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Send</span>
-                                </button>
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="email-message-confirmation-container">
-            <div class="Polaris-ShadowBevel "
-                style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
-                <div class="Polaris-Box email-message-confirmation-block"
-                    style="--pc-box-background:var(--p-color-bg-surface);--pc-box-min-height:100%;--pc-box-overflow-x:clip;--pc-box-overflow-y:clip;--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-400)">
-                    <div class="Polaris-LegacyStack__Item header-container">
-                        <h6 class="Polaris-Text--root Polaris-Text--headingMd">Are You Sure you want to send an Email ?
-                        </h6>
-                    </div>
-                    <div class="Polaris-LegacyStack__Item">
-                        <p class="Polaris-Text--root Polaris-Text--bodyMd">example@gmail.com</p>
-                    </div>
-                    <div class="button-group">
-                        <div class="Polaris-ButtonGroup">
-                            <div class="Polaris-ButtonGroup__Item">
-                                <button
-                                    class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
-                                    type="button">
-                                    <span
-                                        class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Save</span>
-                                </button>
-                            </div>
-                            <div class="Polaris-ButtonGroup__Item modal-cancel-button">
-                                <button
-                                    class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
-                                    type="button">
-                                    <span
-                                        class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="new-reminder-modal-container">
         <div class="Polaris-ShadowBevel"
             style="--pc-shadow-bevel-z-index: 32; --pc-shadow-bevel-content-xs: &quot;&quot;; --pc-shadow-bevel-box-shadow-xs: var(--p-shadow-100); --pc-shadow-bevel-border-radius-xs: var(--p-border-radius-300);">
@@ -2601,8 +2479,8 @@
                             <div class="Polaris-Connected">
                                 <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
                                     <div class="Polaris-TextField Polaris-TextField--hasValue">
-                                        
-                                            <textarea id=":Rq6:" autocomplete="off" class="Polaris-TextField__Input"
+
+                                        <textarea id=":Rq6:" autocomplete="off" class="Polaris-TextField__Input"
                                             type="textarea" aria-labelledby=":Rq6:Label" aria-invalid="false"
                                             data-1p-ignore="true" data-lpignore="true" data-form-type="other" value=""
                                             placeholder=""></textarea>
@@ -2613,7 +2491,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="Polaris-FormLayout__Item Polaris-FormLayout--grouped">
                         <div class="">
                             <div class="Polaris-Labelled__LabelWrapper">
@@ -2646,7 +2524,8 @@
                             <button
                                 class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
                                 type="button">
-                                <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Schedule</span>
+                                <span
+                                    class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Schedule</span>
                             </button>
                         </div>
                         <div class="Polaris-ButtonGroup__Item modal-cancel-button">
@@ -2674,7 +2553,7 @@
 
     </script>
     <script>
-        // Get all tab buttons
+
         const tabs = document.querySelectorAll('.Polaris-Tabs__TabContainer');
         const panels = document.querySelectorAll('.Polaris-Tabs__Panel');
 
@@ -2686,8 +2565,22 @@
                 panels.forEach(p => p.classList.add('Polaris-Tabs__Panel--hidden'));
 
                 // Add active class to the clicked tab and show the corresponding panel
-                tab.querySelector('.Polaris-Tabs__Tab').classList.add('Polaris-Tabs__Tab--active');
+                const currentTab = tab.querySelector('.Polaris-Tabs__Tab');
+                currentTab.classList.add('Polaris-Tabs__Tab--active');
                 panels[index].classList.remove('Polaris-Tabs__Panel--hidden');
+
+                // Check if the active tab has 'history-tab' class
+                if (currentTab.classList.contains('history-tab')) {
+                    const newReminderContainer = document.querySelector('.new-reminder-container');
+                    if (newReminderContainer) {
+                        newReminderContainer.classList.add('hidden');
+                    }
+                } else {
+                    const newReminderContainer = document.querySelector('.new-reminder-container');
+                    if (newReminderContainer) {
+                        newReminderContainer.classList.remove('hidden');
+                    }
+                }
             });
         });
         document.querySelectorAll('.action-tab .Polaris-Button--pressable').forEach(button => {
@@ -2728,39 +2621,7 @@
             });
         });
 
-        const rows = document.querySelectorAll('td.Polaris-IndexTable__TableCell.table-cell-id');
-        rows.forEach(row => {
-            row.addEventListener('click', () => {
-                rows.forEach(r => r.classList.remove('active-row'));
-                row.classList.add('active-row');
-                document.body.classList.add('send-reminder-modal-active');
-                const modalContainer = document.querySelector('.send-remider-modal');
-                if (modalContainer) {
-                    modalContainer.classList.add('send-reminder-modal-active');
-                }
-            });
-        });
-        document.querySelector('.send-remider-info-header .close-btn').addEventListener('click', () => {
-            document.body.classList.remove('send-reminder-modal-active');
-            const sendremindermodalContainer = document.querySelector('.send-remider-modal');
-            if (sendremindermodalContainer) {
-                sendremindermodalContainer.classList.remove('send-reminder-modal-active');
-            }
-        });
-        document.querySelector('.send-button').addEventListener('click', (event) => {
-            document.querySelector('.send-remider-info-container .Polaris-Box').classList.add('email-confirmation-modal-active');
-            const modalContainer = document.querySelector('.email-message-confirmation-container');
-            if (modalContainer) {
-                modalContainer.classList.add('email-confirmation-modal-active');
-            }
-        });
-        document.querySelector('.modal-cancel-button').addEventListener('click', () => {
-            document.querySelector('.send-remider-info-container .Polaris-Box').classList.remove('email-confirmation-modal-active');
-            const modalContainer = document.querySelector('.email-message-confirmation-container');
-            if (modalContainer) {
-                modalContainer.classList.remove('email-confirmation-modal-active');
-            }
-        });
+
         document.querySelector('.new-reminder-container').addEventListener('click', (event) => {
             document.body.classList.add('new-reminder-modal-container-active');
             const modalContainer = document.querySelector('.new-reminder-modal-container');
@@ -2775,6 +2636,7 @@
                 modalContainer.classList.remove('new-reminder-modal-container-active');
             }
         });
+
     </script>
 </body>
 
