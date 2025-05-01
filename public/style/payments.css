@@ -190,6 +190,9 @@ textarea {
   textarea:focus {
     outline: none; 
   }
+  .email-message-confirmation-container.email-confirmation-modal-active {
+    text-align: center;
+}
 @media screen and (max-width:1024px){
     .info_container.payments{
         flex-wrap: wrap;
@@ -199,6 +202,9 @@ textarea {
     .mark-paid-modal-container{
         width: 80%;
         top: 30%;
+    }
+    .info_container.payments {
+        padding-inline: 0;
     }
 }
 .send-reminder-modal-active {

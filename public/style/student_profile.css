@@ -10,7 +10,11 @@
     padding: var(--p-space-200) var(--p-space-400);
     color: #303030;
 }
-
+@media screen and (min-width:786px) and (max-width:1400px){
+    .info_container.student_profile {
+        padding: 20px;
+    }
+}
 @media only screen and (max-width: 786px) {
     .student_card_infolist {
         

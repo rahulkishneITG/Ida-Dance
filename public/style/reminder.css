@@ -197,6 +197,12 @@ body.new-reminder-modal-container-active:before {
         display: flex;
         justify-content: center;
     }
+    .new-reminder-container{
+        white-space: nowrap;
+    }
+    .info_container.remidner-container{
+        padding-inline: 0;
+    }
 }
 .container {
     max-width: 600px; /* Adjust container width as needed */

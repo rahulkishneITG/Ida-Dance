@@ -40,7 +40,7 @@
 .info_container {
     margin: 0 auto;   
     max-height: 600px;
-    overflow: auto;
+    /* overflow: auto; */
     padding-bottom: 50px;
     top: 50px;
     position: absolute;
@@ -254,7 +254,7 @@
         position: relative;
         left: 240px;
     }
-
+    
     .sidebar-menu-button,
     .sidebar-toggler {
         display: none;
@@ -285,24 +285,21 @@
 }
 
 @media only screen and (max-width: 786px) {
-    .right_footer_section {
-    
+    .right_footer_section {  
         width: 100%;
-       
     }
-    
+    .info_container {
+        width: 90%;
+    }
     .right_sidebar_parent.grid_item {
         position: static;
         padding: 20px 0;
         overflow: hidden;
     }
-
-
     .right_sidebar_parent.grid_item {
         position: static;
         padding: 20px 0;
     }
-    
     .right_footer_section .policies_link {
         
         text-align: center;
@@ -310,20 +307,16 @@
     .sidebar-menu-button , .sidebar-toggler {
         display: inline-flex;
     }
-
     .sidebar_container.collapsed {
         position: absolute;
         left: -270px;
         width: 240px;
         transition: all 0.4s ease;
     }
-
     .badge_parent {
         max-width: fit-content;
         padding: 12px 5px 0 0;
     }
-
-
     .sidebar_container {
         position: fixed;
         top: 0;
@@ -334,8 +327,12 @@
         height: 100vh;
         transition: all 0.4s ease;
     }
-
-
+    .info_container .full_width_wrapper {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -343,5 +340,7 @@
         grid-template-columns: 1fr;
         margin-bottom: 20px;
     }
-    
+    .Polaris-LegacyCard ,.Polaris-LegacyCard::before{
+        border-radius: 0.75rem;
+    }
 }
